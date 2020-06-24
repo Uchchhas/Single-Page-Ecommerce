@@ -66,6 +66,7 @@ a {
         color: #fff !important;
         background-color: $brand-color;
     }
+
     &.btn-custom-padding {
         padding: 0.75rem;
     }
@@ -270,15 +271,17 @@ header {
 
                     .dropdown-item {
                         min-width: 200px;
+                        background-color: #fff;
                         padding: 0.75rem 1.5rem;
 
                         &.active {
                             color: $brand-color;
-                            background-color: transparent;
+                            background-color: #fff;
                         }
 
                         &:hover {
                             color: $brand-color;
+                            background-color: #fff;
                         }
                     }
                 }
@@ -481,6 +484,18 @@ section {
                                 color: rgb(0, 158, 127);
                             }
                         }
+
+                        .product-counter {
+                            padding: 6px 10px;
+                            border-radius: 20px;
+                            background-color: $brand-color;
+                            a {
+                                color: #fff;
+                            }
+                            span {
+                                color: #fff;
+                            }
+                        }
                     }
                 }
 
@@ -528,6 +543,7 @@ section {
 
         .carousel-indicators {
             position: initial !important;
+
             li {
                 box-sizing: content-box;
                 flex: 0 1 auto;
@@ -543,10 +559,12 @@ section {
                 border-bottom: 10px solid transparent;
                 opacity: 0.5;
                 transition: opacity 0.6s ease;
+
                 img {
                     border-radius: 0.25rem;
                     border: 2px solid darken(#fff, 5%);
                 }
+
                 &.active {
                     img {
                         border-color: $brand-color !important;
@@ -555,6 +573,7 @@ section {
             }
         }
     }
+
     .product-details-wrapper {
         padding: 30px 60px;
     }
@@ -682,6 +701,7 @@ section {
     .cart-body {
         overflow-y: auto;
         max-height: 75%;
+
         .product-row {
             padding: 20px;
             transition: none;
@@ -740,17 +760,21 @@ section {
         position: absolute;
         bottom: 0;
         padding: 20px;
+
         .input-group {
             padding: 10px;
             border-radius: 6px;
             box-shadow: 0px 1px 6px 2px rgba(0, 0, 0, 0.06);
+
             .form-control {
                 border: 0;
+
                 &:focus {
                     outline: 0;
                     box-shadow: none;
                 }
             }
+
             .btn {
                 font-size: 15px;
                 border-radius: 6px;
@@ -760,6 +784,7 @@ section {
                 border-color: rgb(241, 241, 241);
             }
         }
+
         .checkout-button {
             border: 0;
             height: 48px;
@@ -815,9 +840,11 @@ section {
 .checkout-information-wrapper {
     .card {
         padding: 30px;
+
         .card-header {
             padding: 0;
             margin-bottom: 30px;
+
             .information-number {
                 span {
                     width: 40px;
@@ -832,8 +859,10 @@ section {
                 }
             }
         }
+
         .card-body {
             padding: 0;
+
             .list {
                 position: relative;
                 padding: 15px;
@@ -851,6 +880,7 @@ section {
                     opacity: 0;
                     visibility: hidden;
                     transition: all 0.2s ease-in-out 0s;
+
                     a {
                         color: #fff;
                         width: 20px;
@@ -860,10 +890,12 @@ section {
                         border-radius: 50%;
                         align-items: center;
                         justify-content: center;
+
                         &.edit {
                             margin-right: 5px;
                             background-color: $brand-color;
                         }
+
                         &.delete {
                             background-color: #FF5B60;
                         }
@@ -883,9 +915,11 @@ section {
                 }
             }
         }
+
         &.payment-option-card {
             .list {
                 background-color: #E4F4FC;
+
                 &.active {
                     background-color: #E4F4FC;
                 }
@@ -893,7 +927,98 @@ section {
         }
     }
 }
+
 .order-items-table {
     top: 110px;
     position: sticky;
+}
+
+/*Offer Page Styles*/
+.offer-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .single-offer {
+        height: fit-content;
+        max-width: 20%;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 30px;
+        flex: 0 0 20%;
+
+        @media (max-width: 1500px) and (min-width: 1301px) {
+            max-width: 25%;
+            flex: 0 0 25%;
+        }
+
+        @media (max-width: 1300px) and (min-width: 768px) {
+            max-width: 33.3333%;
+            flex: 0 0 33.3333%;
+        }
+
+        @media (max-width: 1199px) and (min-width: 991px) {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 1199px) {
+            max-width: 50%;
+            flex: 0 0 50%;
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 575px) {
+            max-width: 100%;
+            flex: 0 0 100%;
+        }
+    }
+
+}
+
+/*Help Page Styles*/
+.faq-wrapper {
+    .accordion {
+        .border {
+            border-color: rgb(241, 241, 241) !important;
+        }
+    }
+}
+.collapsible-link {
+    &::before {
+        content: '';
+        width: 14px;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        top: calc(50% - 1px);
+        right: 1rem;
+        display: block;
+        transition: all 0.3s;
+    }
+
+    &::after {
+        content: '';
+        width: 2px;
+        height: 14px;
+        background: #333;
+        position: absolute;
+        top: calc(50% - 7px);
+        right: calc(1rem + 6px);
+        display: block;
+        transition: all 0.3s;
+    }
+
+    &[aria-expanded='true'] {
+        &::after {
+            transform: rotate(90deg) translateX(-1px);
+        }
+
+        &::before {
+            transform: rotate(180deg);
+        }
+    }
 }

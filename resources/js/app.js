@@ -30,6 +30,8 @@ Vue.component('navbar-component', require('./components/User/Layout/Navbar').def
 Vue.component('cart-component', require('./components/User/Cart/Cart').default);
 Vue.component('checkout-component', require('./components/User/Checkout/Checkout').default);
 Vue.component('order-confirm-component', require('./components/User/ConfirmOrder/ConfirmOrder').default);
+Vue.component('offer-component', require('./components/User/Offer/Offer').default);
+Vue.component('help-component', require('./components/User/Help/Help').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

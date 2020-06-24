@@ -49,12 +49,12 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link mr-4" href="#">
+                    <a class="nav-link mr-4" href="/offer">
                         Offer
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mr-4" href="#">
+                    <a class="nav-link mr-4" href="/help">
                         <i class="icofont-question-circle"/> Need Help
                     </a>
                 </li>

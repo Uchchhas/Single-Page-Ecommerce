@@ -22,3 +22,9 @@ Route::get('/checkout', function () {
 Route::get('/order-details', function () {
     return view('user.order.order-details');
 });
+Route::get('/offer', function () {
+    return view('user.offer.offer');
+});
+Route::get('/help', function () {
+    return view('user.help.help');
+});

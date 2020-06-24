@@ -2114,12 +2114,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Cart",
+  props: ['cart_items'],
   data: function data() {
     return {
       showVoucherInput: false
     };
+  },
+  watch: {
+    cart_items: function cart_items() {
+      console.log(this.cart_items, 'cart');
+    }
   },
   methods: {
     openNav: function openNav() {
@@ -2690,6 +2698,131 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/User/Help/Help.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/User/Help/Help.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Help"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/User/HomeComponent.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/User/HomeComponent.vue?vue&type=script&lang=js& ***!
@@ -2699,6 +2832,19 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3177,127 +3323,176 @@ __webpack_require__.r(__webpack_exports__);
         }
       },
       products: [{
+        id: 1,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/GreenLimes_jrodle.jpg',
         name: 'Lime',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 2,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Yellow_Limes_y0lbyo.jpg',
         name: 'Lemon',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 3,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614569/pickbazar/grocery/RedCherries_zylnoo.jpg',
         name: 'Cherry',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 4,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/CelerySticks_ulljfz.jpg',
         name: 'Celery Stick',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 5,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/BabySpinach_xronqz.jpg',
         name: 'Baby Spinach',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 6,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/VeggiePlatter_ztcg0m.jpg',
         name: 'Mix Vegetable Platter',
         weight: '12 pc(s)',
         price: '$1.6',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 7,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Yellow_Limes_y0lbyo.jpg',
         name: 'Lemon',
         weight: '12 pc(s)',
         price: '$4',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 8,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/FrenchGreenBeans_azivow.jpg',
         name: 'French Green Beans',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 9,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Corn_dlrtbv.jpg',
         name: 'Sweet Corn',
         weight: '12 pc(s)',
         price: '$2',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 10,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Cucumber_w6hlxr.jpg',
         name: 'Cucumber',
         weight: '12 pc(s)',
         price: '$2.3',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 11,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/MiniPeppers_iydh8m.jpg',
         name: 'Pepper',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 12,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/GreenBeans_fwddsr.jpg',
         name: 'Green Beans',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 13,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/BrusselsSprouts_adwhet.jpg',
         name: 'Brussels Sprout',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 14,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Peeled_Carrots_xx7mjo.jpg',
         name: 'Peeled Baby Carrot',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 15,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614569/pickbazar/grocery/strawberry_d4lzfz.jpg',
         name: 'Strawberry',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 16,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614570/pickbazar/grocery/blueberries_relyfn.jpg',
         name: 'Blueberries',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 17,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/clementines_h74qrp.jpg',
         name: 'Clementines',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 18,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Yellow_Limes_y0lbyo.jpg',
         name: 'Lemon',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 19,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Yellow_Limes_y0lbyo.jpg',
         name: 'Lemon',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
+        category: 'grocery',
+        isItemAddToCart: false
       }, {
+        id: 20,
         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Yellow_Limes_y0lbyo.jpg',
         name: 'Lemon',
         weight: '12 pc(s)',
         price: '$1.5',
-        category: 'grocery'
-      }]
+        category: 'grocery',
+        isItemAddToCart: false
+      }],
+      shoppingCart: []
     };
+  },
+  methods: {
+    addToCart: function addToCart(itemToAdd) {
+      console.log(itemToAdd);
+      itemToAdd.isItemAddToCart = true;
+      this.shoppingCart.push(itemToAdd);
+      console.log(this.shoppingCart);
+    }
   }
 });
 
@@ -3424,6 +3619,146 @@ __webpack_require__.r(__webpack_exports__);
       "default": ''
     }
   }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/User/Offer/Offer.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/User/Offer/Offer.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Offer"
 });
 
 /***/ }),
@@ -49840,7 +50175,18 @@ var render = function() {
         }
       },
       [
-        _vm._m(4),
+        _c(
+          "div",
+          { staticClass: "text-white mb-3 font-weight-bold text-center" },
+          [
+            _c("i", { staticClass: "icofont-cart-alt" }),
+            _vm._v(" "),
+            _vm.cart_items.length == 0
+              ? [_vm._v("0 Items")]
+              : [_vm._v(_vm._s(_vm.cart_items.length) + " Items")]
+          ],
+          2
+        ),
         _vm._v(" "),
         _c(
           "div",
@@ -49848,7 +50194,7 @@ var render = function() {
             staticClass:
               "bg-white py-1 px-3 text-center font-weight-bold text-brand-color rounded"
           },
-          [_vm._v("\n            $15.30\n        ")]
+          [_vm._v("\n            $00.00\n        ")]
         )
       ]
     )
@@ -50034,19 +50380,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("span", { staticClass: "price-tag" }, [_vm._v("$1.50")])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "text-white mb-3 font-weight-bold text-center" },
-      [
-        _c("i", { staticClass: "icofont-cart-alt" }),
-        _vm._v(" 2 Items\n        ")
-      ]
-    )
   }
 ]
 render._withStripped = true
@@ -51385,6 +51718,329 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/User/Help/Help.vue?vue&type=template&id=e10b3c94&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/User/Help/Help.vue?vue&type=template&id=e10b3c94& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("cart-component"),
+      _vm._v(" "),
+      _c("navbar-component", { attrs: { "navbar-class": "navbar-fixed-top" } }),
+      _vm._v(" "),
+      _vm._m(0)
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("main", { staticClass: "pt-140" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c(
+            "div",
+            { staticClass: "col-12 col-sm-10 col-md-10 col-lg-10 col-xl-9" },
+            [
+              _c("div", { staticClass: "faq-wrapper" }, [
+                _c("h4", { staticClass: "text-center font-weight-bold mb-3" }, [
+                  _vm._v("F.A.Q")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "accordion",
+                    attrs: { id: "accordionExample" }
+                  },
+                  [
+                    _c("div", { staticClass: "card border mb-2" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "card-header bg-white border-0",
+                          attrs: { id: "headingOne" }
+                        },
+                        [
+                          _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "d-block position-relative text-dark collapsible-link py-3",
+                                attrs: {
+                                  href: "#",
+                                  "data-toggle": "collapse",
+                                  "data-target": "#collapseOne",
+                                  "aria-expanded": "false",
+                                  "aria-controls": "collapseOne"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                            How to contact with Customer Service?\n                                        "
+                                )
+                              ]
+                            )
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "collapse",
+                          attrs: {
+                            id: "collapseOne",
+                            "aria-labelledby": "headingOne",
+                            "data-parent": "#accordionExample"
+                          }
+                        },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "card-body pt-0 px-4 pb-4" },
+                            [
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "font-weight-light text-muted m-0"
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                            Our Customer Experience Team is available 7 days a week and we offer 2 ways to get in contact.Email and Chat . We try to reply quickly, so you need not to wait too long for a response!.\n                                        "
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card border mb-2" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "card-header bg-white border-0",
+                          attrs: { id: "headingTwo" }
+                        },
+                        [
+                          _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "d-block position-relative collapsed text-dark collapsible-link py-3",
+                                attrs: {
+                                  href: "#",
+                                  "data-toggle": "collapse",
+                                  "data-target": "#collapseTwo",
+                                  "aria-expanded": "false",
+                                  "aria-controls": "collapseTwo"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                            App installation failed, how to update system information?\n                                        "
+                                )
+                              ]
+                            )
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "collapse",
+                          attrs: {
+                            id: "collapseTwo",
+                            "aria-labelledby": "headingTwo",
+                            "data-parent": "#accordionExample"
+                          }
+                        },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "card-body pt-0 px-4 pb-4" },
+                            [
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "font-weight-light text-muted m-0"
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                            Please read the documentation carefully . We also have some online video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum\n                                        "
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card border mb-2" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "card-header bg-white border-0",
+                          attrs: { id: "headingThree" }
+                        },
+                        [
+                          _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "d-block position-relative collapsed text-dark collapsible-link py-3",
+                                attrs: {
+                                  href: "#",
+                                  "data-toggle": "collapse",
+                                  "data-target": "#collapseThree",
+                                  "aria-expanded": "false",
+                                  "aria-controls": "collapseThree"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                            Website reponse taking time, how to improve?\n                                        "
+                                )
+                              ]
+                            )
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "collapse",
+                          attrs: {
+                            id: "collapseThree",
+                            "aria-labelledby": "headingThree",
+                            "data-parent": "#accordionExample"
+                          }
+                        },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "card-body pt-0 px-4 pb-4" },
+                            [
+                              _c(
+                                "p",
+                                {
+                                  staticClass:
+                                    "font-weight-light text-muted m-0"
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                            At first, Please check your internet connection . We also have some online video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum .\n                                        "
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "card border mb-2" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass: "card-header bg-white border-0",
+                          attrs: { id: "headingFour" }
+                        },
+                        [
+                          _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "d-block position-relative collapsed text-dark collapsible-link py-3",
+                                attrs: {
+                                  href: "#",
+                                  "data-toggle": "collapse",
+                                  "data-target": "#collapseFour",
+                                  "aria-expanded": "false",
+                                  "aria-controls": "collapseThree"
+                                }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                            How do I create a account?\n                                        "
+                                )
+                              ]
+                            )
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass: "collapse",
+                          attrs: {
+                            id: "collapseFour",
+                            "aria-labelledby": "headingThree",
+                            "data-parent": "#accordionExample"
+                          }
+                        },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "card-body pt-0 px-4 pb-4" },
+                            [
+                              _c(
+                                "p",
+                                { staticClass: "font-weight-light m-0" },
+                                [
+                                  _vm._v(
+                                    "\n                                            If you want to open an account for personal use you can do it over the phone or online. Opening an account online should only take a few minutes.\n                                        "
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/User/HomeComponent.vue?vue&type=template&id=34ba1025&":
 /*!*********************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/User/HomeComponent.vue?vue&type=template&id=34ba1025& ***!
@@ -51403,7 +52059,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("cart-component"),
+      _c("cart-component", { attrs: { cart_items: _vm.shoppingCart } }),
       _vm._v(" "),
       _c(
         "header",
@@ -51510,41 +52166,66 @@ var render = function() {
           )
         ]),
         _vm._v(" "),
-        _c("section", { staticClass: "products-area" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "all-products" },
-            [
-              _vm._l(_vm.products, function(product, index) {
-                return _c("div", { key: index, staticClass: "product-card" }, [
-                  _c("div", { staticClass: "bg-white" }, [
-                    _c(
-                      "a",
-                      {
-                        attrs: {
-                          href: "#",
-                          "data-toggle": "modal",
-                          "data-target": "#productDetailsModal"
-                        }
-                      },
-                      [
-                        _c("div", { staticClass: "product-image-wrapper" }, [
-                          _c("img", {
-                            staticClass: "img-fluid",
-                            attrs: { src: product.img, alt: product.name }
-                          })
-                        ]),
+        _c(
+          "section",
+          { staticClass: "products-area", attrs: { id: "productsArea" } },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "all-products" },
+              [
+                _vm._l(_vm.products, function(product, index) {
+                  return _c(
+                    "div",
+                    { key: index, staticClass: "product-card" },
+                    [
+                      _c("div", { staticClass: "bg-white" }, [
+                        _c(
+                          "a",
+                          {
+                            attrs: {
+                              href: "#",
+                              "data-toggle": "modal",
+                              "data-target": "#productDetailsModal"
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "product-image-wrapper" },
+                              [
+                                _c("img", {
+                                  staticClass: "img-fluid",
+                                  attrs: { src: product.img, alt: product.name }
+                                })
+                              ]
+                            )
+                          ]
+                        ),
                         _vm._v(" "),
                         _c("div", { staticClass: "product-info-wrapper" }, [
-                          _c("h3", { staticClass: "product-title" }, [
-                            _vm._v(_vm._s(product.name))
-                          ]),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "product-weight" }, [
-                            _vm._v(_vm._s(product.weight))
-                          ]),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "d-block",
+                              attrs: {
+                                href: "#",
+                                "data-toggle": "modal",
+                                "data-target": "#productDetailsModal"
+                              }
+                            },
+                            [
+                              _c("h3", { staticClass: "product-title" }, [
+                                _vm._v(_vm._s(product.name))
+                              ]),
+                              _vm._v(" "),
+                              _c("span", { staticClass: "product-weight" }, [
+                                _vm._v(_vm._s(product.weight))
+                              ])
+                            ]
+                          ),
                           _vm._v(" "),
                           _c("div", { staticClass: "product-meta" }, [
                             _c(
@@ -51557,25 +52238,61 @@ var render = function() {
                               ]
                             ),
                             _vm._v(" "),
-                            _vm._m(2, true)
+                            product.isItemAddToCart === false
+                              ? _c(
+                                  "button",
+                                  {
+                                    staticClass: "add-cart-button",
+                                    attrs: { type: "button" },
+                                    on: {
+                                      click: function($event) {
+                                        $event.preventDefault()
+                                        return _vm.addToCart(product)
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _vm._m(2, true),
+                                    _vm._v(" "),
+                                    _c("span", { staticClass: "btn-text" }, [
+                                      _vm._v("Cart")
+                                    ])
+                                  ]
+                                )
+                              : _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "d-flex align-items-center product-counter"
+                                  },
+                                  [
+                                    _vm._m(3, true),
+                                    _vm._v(" "),
+                                    _c("span", { staticClass: "mx-3" }, [
+                                      _vm._v("1")
+                                    ]),
+                                    _vm._v(" "),
+                                    _vm._m(4, true)
+                                  ]
+                                )
                           ])
                         ])
-                      ]
-                    )
-                  ])
-                ])
-              }),
-              _vm._v(" "),
-              _vm._m(3)
-            ],
-            2
-          )
-        ])
+                      ])
+                    ]
+                  )
+                }),
+                _vm._v(" "),
+                _vm._m(5)
+              ],
+              2
+            )
+          ]
+        )
       ]),
       _vm._v(" "),
       _c("login-register-modal"),
       _vm._v(" "),
-      _vm._m(4)
+      _vm._m(6)
     ],
     1
   )
@@ -51696,7 +52413,7 @@ var staticRenderFns = [
                     [
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(
@@ -51707,7 +52424,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(
@@ -51759,7 +52476,7 @@ var staticRenderFns = [
                     [
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Meat\n                                    ")
@@ -51768,7 +52485,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Fish\n                                    ")
@@ -51818,7 +52535,7 @@ var staticRenderFns = [
                     [
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(
@@ -51829,7 +52546,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(
@@ -51881,7 +52598,7 @@ var staticRenderFns = [
                     [
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Meat\n                                    ")
@@ -51890,7 +52607,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Fish\n                                    ")
@@ -51940,7 +52657,7 @@ var staticRenderFns = [
                     [
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Meat\n                                    ")
@@ -51949,7 +52666,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Fish\n                                    ")
@@ -51999,7 +52716,7 @@ var staticRenderFns = [
                     [
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Meat\n                                    ")
@@ -52008,7 +52725,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Fish\n                                    ")
@@ -52058,7 +52775,7 @@ var staticRenderFns = [
                     [
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Meat\n                                    ")
@@ -52067,7 +52784,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Fish\n                                    ")
@@ -52117,7 +52834,7 @@ var staticRenderFns = [
                     [
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Meat\n                                    ")
@@ -52126,7 +52843,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Fish\n                                    ")
@@ -52176,7 +52893,7 @@ var staticRenderFns = [
                     [
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Meat\n                                    ")
@@ -52185,7 +52902,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Fish\n                                    ")
@@ -52235,7 +52952,7 @@ var staticRenderFns = [
                     [
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Meat\n                                    ")
@@ -52244,7 +52961,7 @@ var staticRenderFns = [
                       _vm._v(" "),
                       _c(
                         "a",
-                        { staticClass: "nav-link", attrs: { href: "#" } },
+                        { staticClass: "nav-link", attrs: { href: "/" } },
                         [
                           _c("i", { staticClass: "icofont-minus" }),
                           _vm._v(" Fish\n                                    ")
@@ -52264,17 +52981,25 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      { staticClass: "add-cart-button", attrs: { type: "button" } },
-      [
-        _c("span", { staticClass: "btn-icon" }, [
-          _c("i", { staticClass: "icofont-basket" })
-        ]),
-        _vm._v(" "),
-        _c("span", { staticClass: "btn-text" }, [_vm._v("Cart")])
-      ]
-    )
+    return _c("span", { staticClass: "btn-icon" }, [
+      _c("i", { staticClass: "icofont-basket" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#" } }, [
+      _c("i", { staticClass: "icofont-plus" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "#" } }, [
+      _c("i", { staticClass: "icofont-minus" })
+    ])
   },
   function() {
     var _vm = this
@@ -52659,16 +53384,22 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("ul", { staticClass: "navbar-nav ml-auto" }, [
           _c("li", { staticClass: "nav-item" }, [
-            _c("a", { staticClass: "nav-link mr-4", attrs: { href: "#" } }, [
-              _vm._v("\n                    Offer\n                ")
-            ])
+            _c(
+              "a",
+              { staticClass: "nav-link mr-4", attrs: { href: "/offer" } },
+              [_vm._v("\n                    Offer\n                ")]
+            )
           ]),
           _vm._v(" "),
           _c("li", { staticClass: "nav-item" }, [
-            _c("a", { staticClass: "nav-link mr-4", attrs: { href: "#" } }, [
-              _c("i", { staticClass: "icofont-question-circle" }),
-              _vm._v(" Need Help\n                ")
-            ])
+            _c(
+              "a",
+              { staticClass: "nav-link mr-4", attrs: { href: "/help" } },
+              [
+                _c("i", { staticClass: "icofont-question-circle" }),
+                _vm._v(" Need Help\n                ")
+              ]
+            )
           ]),
           _vm._v(" "),
           _c(
@@ -52862,6 +53593,381 @@ var staticRenderFns = [
         ])
       ]
     )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/User/Offer/Offer.vue?vue&type=template&id=419c4450&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/User/Offer/Offer.vue?vue&type=template&id=419c4450& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c("cart-component"),
+      _vm._v(" "),
+      _c("navbar-component", { attrs: { "navbar-class": "navbar-fixed-top" } }),
+      _vm._v(" "),
+      _vm._m(0)
+    ],
+    1
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("main", { staticClass: "pt-140" }, [
+      _c("div", { staticClass: "container-fluid" }, [
+        _c("div", { staticClass: "offer-wrapper px-5" }, [
+          _c("div", { staticClass: "single-offer" }, [
+            _c("img", {
+              staticClass: "img-fluid w-100",
+              attrs: {
+                src:
+                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                alt: "Offer image"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                },
+                [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-brand-color font-weight-bold",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Copy")]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single-offer" }, [
+            _c("img", {
+              staticClass: "img-fluid w-100",
+              attrs: {
+                src:
+                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
+                alt: "Offer image"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                },
+                [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-brand-color font-weight-bold",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Copy")]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single-offer" }, [
+            _c("img", {
+              staticClass: "img-fluid w-100",
+              attrs: {
+                src:
+                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                alt: "Offer image"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                },
+                [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-brand-color font-weight-bold",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Copy")]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single-offer" }, [
+            _c("img", {
+              staticClass: "img-fluid w-100",
+              attrs: {
+                src:
+                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
+                alt: "Offer image"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                },
+                [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-brand-color font-weight-bold",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Copy")]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single-offer" }, [
+            _c("img", {
+              staticClass: "img-fluid w-100",
+              attrs: {
+                src:
+                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
+                alt: "Offer image"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                },
+                [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-brand-color font-weight-bold",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Copy")]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single-offer" }, [
+            _c("img", {
+              staticClass: "img-fluid w-100",
+              attrs: {
+                src:
+                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                alt: "Offer image"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                },
+                [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-brand-color font-weight-bold",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Copy")]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single-offer" }, [
+            _c("img", {
+              staticClass: "img-fluid w-100",
+              attrs: {
+                src:
+                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
+                alt: "Offer image"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                },
+                [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-brand-color font-weight-bold",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Copy")]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single-offer" }, [
+            _c("img", {
+              staticClass: "img-fluid w-100",
+              attrs: {
+                src:
+                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                alt: "Offer image"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                },
+                [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-brand-color font-weight-bold",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Copy")]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single-offer" }, [
+            _c("img", {
+              staticClass: "img-fluid w-100",
+              attrs: {
+                src:
+                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                alt: "Offer image"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                },
+                [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-brand-color font-weight-bold",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Copy")]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "single-offer" }, [
+            _c("img", {
+              staticClass: "img-fluid w-100",
+              attrs: {
+                src:
+                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                alt: "Offer image"
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "px-3" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                },
+                [
+                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "text-brand-color font-weight-bold",
+                      attrs: { href: "#" }
+                    },
+                    [_vm._v("Copy")]
+                  )
+                ]
+              )
+            ])
+          ])
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -65075,6 +66181,8 @@ Vue.component('navbar-component', __webpack_require__(/*! ./components/User/Layo
 Vue.component('cart-component', __webpack_require__(/*! ./components/User/Cart/Cart */ "./resources/js/components/User/Cart/Cart.vue")["default"]);
 Vue.component('checkout-component', __webpack_require__(/*! ./components/User/Checkout/Checkout */ "./resources/js/components/User/Checkout/Checkout.vue")["default"]);
 Vue.component('order-confirm-component', __webpack_require__(/*! ./components/User/ConfirmOrder/ConfirmOrder */ "./resources/js/components/User/ConfirmOrder/ConfirmOrder.vue")["default"]);
+Vue.component('offer-component', __webpack_require__(/*! ./components/User/Offer/Offer */ "./resources/js/components/User/Offer/Offer.vue")["default"]);
+Vue.component('help-component', __webpack_require__(/*! ./components/User/Help/Help */ "./resources/js/components/User/Help/Help.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -65408,6 +66516,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/User/Help/Help.vue":
+/*!****************************************************!*\
+  !*** ./resources/js/components/User/Help/Help.vue ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Help_vue_vue_type_template_id_e10b3c94___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Help.vue?vue&type=template&id=e10b3c94& */ "./resources/js/components/User/Help/Help.vue?vue&type=template&id=e10b3c94&");
+/* harmony import */ var _Help_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Help.vue?vue&type=script&lang=js& */ "./resources/js/components/User/Help/Help.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Help_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Help_vue_vue_type_template_id_e10b3c94___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Help_vue_vue_type_template_id_e10b3c94___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/User/Help/Help.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/User/Help/Help.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/User/Help/Help.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Help_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Help.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/User/Help/Help.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Help_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/User/Help/Help.vue?vue&type=template&id=e10b3c94&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/User/Help/Help.vue?vue&type=template&id=e10b3c94& ***!
+  \***********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Help_vue_vue_type_template_id_e10b3c94___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Help.vue?vue&type=template&id=e10b3c94& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/User/Help/Help.vue?vue&type=template&id=e10b3c94&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Help_vue_vue_type_template_id_e10b3c94___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Help_vue_vue_type_template_id_e10b3c94___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/User/HomeComponent.vue":
 /*!********************************************************!*\
   !*** ./resources/js/components/User/HomeComponent.vue ***!
@@ -65541,6 +66718,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_58da3708___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Navbar_vue_vue_type_template_id_58da3708___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/User/Offer/Offer.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/User/Offer/Offer.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Offer_vue_vue_type_template_id_419c4450___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Offer.vue?vue&type=template&id=419c4450& */ "./resources/js/components/User/Offer/Offer.vue?vue&type=template&id=419c4450&");
+/* harmony import */ var _Offer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Offer.vue?vue&type=script&lang=js& */ "./resources/js/components/User/Offer/Offer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Offer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Offer_vue_vue_type_template_id_419c4450___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Offer_vue_vue_type_template_id_419c4450___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/User/Offer/Offer.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/User/Offer/Offer.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/User/Offer/Offer.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Offer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Offer.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/User/Offer/Offer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Offer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/User/Offer/Offer.vue?vue&type=template&id=419c4450&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/User/Offer/Offer.vue?vue&type=template&id=419c4450& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Offer_vue_vue_type_template_id_419c4450___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./Offer.vue?vue&type=template&id=419c4450& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/User/Offer/Offer.vue?vue&type=template&id=419c4450&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Offer_vue_vue_type_template_id_419c4450___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Offer_vue_vue_type_template_id_419c4450___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

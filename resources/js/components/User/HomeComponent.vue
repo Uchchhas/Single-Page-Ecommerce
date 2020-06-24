@@ -1,6 +1,6 @@
 <template>
     <div>
-        <cart-component/>
+        <cart-component :cart_items="shoppingCart"/>
 
         <header>
             <navbar-component :navbar-class="'navbar-home'"/>
@@ -82,7 +82,7 @@
                 </div>
             </section>
 
-            <section class="products-area">
+            <section class="products-area" id="productsArea">
                 <div class="category-sidebar">
                     <nav class="category-sidenav accordion" id="sidenavAccordion">
                         <div class="category-sidenav-menu">
@@ -103,10 +103,10 @@
                                      aria-labelledby="headingOne"
                                      data-parent="#sidenavAccordion">
                                     <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Fruits
                                         </a>
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Vegetables
                                         </a>
                                     </nav>
@@ -128,10 +128,10 @@
                                      aria-labelledby="headingOne"
                                      data-parent="#sidenavAccordion">
                                     <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Meat
                                         </a>
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Fish
                                         </a>
                                     </nav>
@@ -153,10 +153,10 @@
                                      aria-labelledby="headingOne"
                                      data-parent="#sidenavAccordion">
                                     <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Biscuits
                                         </a>
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Chocolates
                                         </a>
                                     </nav>
@@ -178,10 +178,10 @@
                                      aria-labelledby="headingOne"
                                      data-parent="#sidenavAccordion">
                                     <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Meat
                                         </a>
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Fish
                                         </a>
                                     </nav>
@@ -203,10 +203,10 @@
                                      aria-labelledby="headingOne"
                                      data-parent="#sidenavAccordion">
                                     <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Meat
                                         </a>
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Fish
                                         </a>
                                     </nav>
@@ -228,10 +228,10 @@
                                      aria-labelledby="headingOne"
                                      data-parent="#sidenavAccordion">
                                     <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Meat
                                         </a>
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Fish
                                         </a>
                                     </nav>
@@ -253,10 +253,10 @@
                                      aria-labelledby="headingOne"
                                      data-parent="#sidenavAccordion">
                                     <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Meat
                                         </a>
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Fish
                                         </a>
                                     </nav>
@@ -278,10 +278,10 @@
                                      aria-labelledby="headingOne"
                                      data-parent="#sidenavAccordion">
                                     <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Meat
                                         </a>
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Fish
                                         </a>
                                     </nav>
@@ -303,10 +303,10 @@
                                      aria-labelledby="headingOne"
                                      data-parent="#sidenavAccordion">
                                     <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Meat
                                         </a>
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Fish
                                         </a>
                                     </nav>
@@ -328,10 +328,10 @@
                                      aria-labelledby="headingOne"
                                      data-parent="#sidenavAccordion">
                                     <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Meat
                                         </a>
-                                        <a class="nav-link" href="#">
+                                        <a class="nav-link" href="/">
                                             <i class="icofont-minus"/> Fish
                                         </a>
                                     </nav>
@@ -349,22 +349,35 @@
                                          class="img-fluid"
                                          :alt="product.name">
                                 </div>
-                                <div class="product-info-wrapper">
+                            </a>
+                            <div class="product-info-wrapper">
+                                <a href="#" class="d-block" data-toggle="modal" data-target="#productDetailsModal">
                                     <h3 class="product-title">{{ product.name }}</h3>
                                     <span class="product-weight">{{ product.weight }}</span>
-                                    <div class="product-meta">
-                                        <div class="product-price-wrapper">
-                                            <span class="product-price">{{ product.price }}</span>
-                                        </div>
-                                        <button type="button" class="add-cart-button">
-                                            <span class="btn-icon">
-                                                <i class="icofont-basket"/>
-                                            </span>
-                                            <span class="btn-text">Cart</span>
-                                        </button>
+                                </a>
+                                <div class="product-meta">
+                                    <div class="product-price-wrapper">
+                                        <span class="product-price">{{ product.price }}</span>
+                                    </div>
+                                    <button v-if="product.isItemAddToCart === false" type="button"
+                                            class="add-cart-button"
+                                            @click.prevent="addToCart(product)">
+                                        <span class="btn-icon">
+                                            <i class="icofont-basket"/>
+                                        </span>
+                                        <span class="btn-text">Cart</span>
+                                    </button>
+                                    <div v-else class="d-flex align-items-center product-counter">
+                                        <a href="#">
+                                            <i class="icofont-plus"/>
+                                        </a>
+                                        <span class="mx-3">1</span>
+                                        <a href="#">
+                                            <i class="icofont-minus"/>
+                                        </a>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
                     <div class="d-flex justify-content-center w-100">
@@ -478,146 +491,195 @@
                 },
                 products: [
                     {
+                        id: 1,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/GreenLimes_jrodle.jpg',
                         name: 'Lime',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 2,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Yellow_Limes_y0lbyo.jpg',
                         name: 'Lemon',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 3,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614569/pickbazar/grocery/RedCherries_zylnoo.jpg',
                         name: 'Cherry',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 4,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/CelerySticks_ulljfz.jpg',
                         name: 'Celery Stick',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 5,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/BabySpinach_xronqz.jpg',
                         name: 'Baby Spinach',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 6,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/VeggiePlatter_ztcg0m.jpg',
                         name: 'Mix Vegetable Platter',
                         weight: '12 pc(s)',
                         price: '$1.6',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 7,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Yellow_Limes_y0lbyo.jpg',
                         name: 'Lemon',
                         weight: '12 pc(s)',
                         price: '$4',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 8,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/FrenchGreenBeans_azivow.jpg',
                         name: 'French Green Beans',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 9,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Corn_dlrtbv.jpg',
                         name: 'Sweet Corn',
                         weight: '12 pc(s)',
                         price: '$2',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 10,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Cucumber_w6hlxr.jpg',
                         name: 'Cucumber',
                         weight: '12 pc(s)',
                         price: '$2.3',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 11,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/MiniPeppers_iydh8m.jpg',
                         name: 'Pepper',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 12,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/GreenBeans_fwddsr.jpg',
                         name: 'Green Beans',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 13,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/BrusselsSprouts_adwhet.jpg',
                         name: 'Brussels Sprout',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 14,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Peeled_Carrots_xx7mjo.jpg',
                         name: 'Peeled Baby Carrot',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 15,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614569/pickbazar/grocery/strawberry_d4lzfz.jpg',
                         name: 'Strawberry',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 16,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614570/pickbazar/grocery/blueberries_relyfn.jpg',
                         name: 'Blueberries',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 17,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/clementines_h74qrp.jpg',
                         name: 'Clementines',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 18,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Yellow_Limes_y0lbyo.jpg',
                         name: 'Lemon',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 19,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Yellow_Limes_y0lbyo.jpg',
                         name: 'Lemon',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     },
                     {
+                        id: 20,
                         img: 'https://res.cloudinary.com/redq-inc/image/upload/c_fit,q_auto:best,w_300/v1589614568/pickbazar/grocery/Yellow_Limes_y0lbyo.jpg',
                         name: 'Lemon',
                         weight: '12 pc(s)',
                         price: '$1.5',
-                        category: 'grocery'
+                        category: 'grocery',
+                        isItemAddToCart: false,
                     }
                 ],
+                shoppingCart: []
+            }
+        },
+        methods: {
+            addToCart(itemToAdd) {
+                console.log(itemToAdd);
+                itemToAdd.isItemAddToCart = true;
+                this.shoppingCart.push(itemToAdd);
+                console.log(this.shoppingCart)
             }
         }
     }

@@ -8,8 +8,9 @@
         <!-- CSS Files -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('css/icofont.css') }}">
+        <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/2897/2897951.svg" type="image/x-icon">
 
-        <title>Hello, world!</title>
+        <title>@yield('page-title')</title>
     </head>
     <body>
         <div id="app">
