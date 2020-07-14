@@ -1,344 +1,345 @@
 <template>
     <div>
-        <cart-component :cart_items="shoppingCart"/>
-
-        <header>
-            <navbar-component :navbar-class="'navbar-home'"/>
-
-            <div class="banner-content text-center d-flex flex-column justify-content-center h-100">
-                <div class="banner-content-wrapper">
-                    <h1>Groceries Delivered in 90 Minute</h1>
-                    <h5 class="text-muted mb-5">Get your healthy foods & snacks delivered at your doorsteps all day
-                        everyday</h5>
-                    <div class="main-search-wrapper mx-auto px-1">
-                        <div class="row no-gutters">
-                            <div class="col-10">
-                                <div class="p-1">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <div class="search-category">
-                                                Grocery
+        <main>
+            <section class="banner-area mb-4">
+                <div class="row">
+                    <div class="col-12 col-sm-3">
+                        <div class="category-sidebar h-100">
+                            <nav class="category-sidenav accordion" id="sidenavAccordion">
+                                <div class="category-sidenav-menu">
+                                    <div class="nav">
+                                        <a class="nav-link collapsed"
+                                           href="#"
+                                           data-toggle="collapse"
+                                           data-target="#fruitsAndVegetables"
+                                           aria-expanded="false"
+                                           aria-controls="fruitsAndVegetables">
+                                            <div class="category-sidenav-link-icon">
+                                                <i class="icofont-fruits"/>
                                             </div>
+                                            Fruits & Vegetables
+                                        </a>
+                                        <div class="collapse"
+                                             id="fruitsAndVegetables"
+                                             aria-labelledby="headingOne"
+                                             data-parent="#sidenavAccordion">
+                                            <nav class="category-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Fruits
+                                                </a>
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Vegetables
+                                                </a>
+                                            </nav>
                                         </div>
-                                        <div class="col-8">
-                                            <div class="search-input">
-                                                <input type="text" class="form-control"
-                                                       placeholder="Search yout product from here">
+
+                                        <a class="nav-link collapsed"
+                                           href="#"
+                                           data-toggle="collapse"
+                                           data-target="#meatAndFish"
+                                           aria-expanded="false"
+                                           aria-controls="meatAndFish">
+                                            <div class="category-sidenav-link-icon">
+                                                <i class="icofont-fish-5"/>
                                             </div>
+                                            Meat & Fish
+                                        </a>
+                                        <div class="collapse"
+                                             id="meatAndFish"
+                                             aria-labelledby="headingOne"
+                                             data-parent="#sidenavAccordion">
+                                            <nav class="category-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Meat
+                                                </a>
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Fish
+                                                </a>
+                                            </nav>
+                                        </div>
+
+                                        <a class="nav-link collapsed"
+                                           href="#"
+                                           data-toggle="collapse"
+                                           data-target="#snacks"
+                                           aria-expanded="false"
+                                           aria-controls="snacks">
+                                            <div class="category-sidenav-link-icon">
+                                                <i class="icofont-bread"/>
+                                            </div>
+                                            Snacks
+                                        </a>
+                                        <div class="collapse"
+                                             id="snacks"
+                                             aria-labelledby="headingOne"
+                                             data-parent="#sidenavAccordion">
+                                            <nav class="category-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Biscuits
+                                                </a>
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Chocolates
+                                                </a>
+                                            </nav>
+                                        </div>
+
+                                        <a class="nav-link collapsed"
+                                           href="#"
+                                           data-toggle="collapse"
+                                           data-target="#petCare"
+                                           aria-expanded="false"
+                                           aria-controls="petCare">
+                                            <div class="category-sidenav-link-icon">
+                                                <i class="icofont-cat-alt-3"/>
+                                            </div>
+                                            Pet Care
+                                        </a>
+                                        <div class="collapse"
+                                             id="petCare"
+                                             aria-labelledby="headingOne"
+                                             data-parent="#sidenavAccordion">
+                                            <nav class="category-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Meat
+                                                </a>
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Fish
+                                                </a>
+                                            </nav>
+                                        </div>
+
+                                        <a class="nav-link collapsed"
+                                           href="#"
+                                           data-toggle="collapse"
+                                           data-target="#homeAndCleaning"
+                                           aria-expanded="false"
+                                           aria-controls="homeAndCleaning">
+                                            <div class="category-sidenav-link-icon">
+                                                <i class="icofont-paint-brush"/>
+                                            </div>
+                                            Home & Cleaning
+                                        </a>
+                                        <div class="collapse"
+                                             id="homeAndCleaning"
+                                             aria-labelledby="headingOne"
+                                             data-parent="#sidenavAccordion">
+                                            <nav class="category-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Meat
+                                                </a>
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Fish
+                                                </a>
+                                            </nav>
+                                        </div>
+
+                                        <a class="nav-link collapsed"
+                                           href="#"
+                                           data-toggle="collapse"
+                                           data-target="#dairy"
+                                           aria-expanded="false"
+                                           aria-controls="dairy">
+                                            <div class="category-sidenav-link-icon">
+                                                <i class="icofont-milk"/>
+                                            </div>
+                                            Dairy
+                                        </a>
+                                        <div class="collapse"
+                                             id="dairy"
+                                             aria-labelledby="headingOne"
+                                             data-parent="#sidenavAccordion">
+                                            <nav class="category-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Meat
+                                                </a>
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Fish
+                                                </a>
+                                            </nav>
+                                        </div>
+
+                                        <a class="nav-link collapsed"
+                                           href="#"
+                                           data-toggle="collapse"
+                                           data-target="#cooking"
+                                           aria-expanded="false"
+                                           aria-controls="cooking">
+                                            <div class="category-sidenav-link-icon">
+                                                <i class="icofont-muffin"/>
+                                            </div>
+                                            Cooking
+                                        </a>
+                                        <div class="collapse"
+                                             id="cooking"
+                                             aria-labelledby="headingOne"
+                                             data-parent="#sidenavAccordion">
+                                            <nav class="category-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Meat
+                                                </a>
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Fish
+                                                </a>
+                                            </nav>
+                                        </div>
+
+                                        <a class="nav-link collapsed"
+                                           href="#"
+                                           data-toggle="collapse"
+                                           data-target="#breakfast"
+                                           aria-expanded="false"
+                                           aria-controls="breakfast">
+                                            <div class="category-sidenav-link-icon">
+                                                <i class="icofont-fast-food"/>
+                                            </div>
+                                            Breakfast
+                                        </a>
+                                        <div class="collapse"
+                                             id="breakfast"
+                                             aria-labelledby="headingOne"
+                                             data-parent="#sidenavAccordion">
+                                            <nav class="category-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Meat
+                                                </a>
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Fish
+                                                </a>
+                                            </nav>
+                                        </div>
+
+                                        <a class="nav-link collapsed"
+                                           href="#"
+                                           data-toggle="collapse"
+                                           data-target="#beverage"
+                                           aria-expanded="false"
+                                           aria-controls="beverage">
+                                            <div class="category-sidenav-link-icon">
+                                                <i class="icofont-soft-drinks"/>
+                                            </div>
+                                            Beverage
+                                        </a>
+                                        <div class="collapse"
+                                             id="beverage"
+                                             aria-labelledby="headingOne"
+                                             data-parent="#sidenavAccordion">
+                                            <nav class="category-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Meat
+                                                </a>
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Fish
+                                                </a>
+                                            </nav>
+                                        </div>
+
+                                        <a class="nav-link collapsed"
+                                           href="#"
+                                           data-toggle="collapse"
+                                           data-target="#beautyAndHealth"
+                                           aria-expanded="false"
+                                           aria-controls="beautyAndHealth">
+                                            <div class="category-sidenav-link-icon">
+                                                <i class="icofont-heart-beat-alt"/>
+                                            </div>
+                                            Beauty & Health
+                                        </a>
+                                        <div class="collapse"
+                                             id="beautyAndHealth"
+                                             aria-labelledby="headingOne"
+                                             data-parent="#sidenavAccordion">
+                                            <nav class="category-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Meat
+                                                </a>
+                                                <a class="nav-link" href="/">
+                                                    <i class="icofont-minus"/> Fish
+                                                </a>
+                                            </nav>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="search-button">
-                                    <a href="#">
-                                        <i class="icofont-search-2"/> Search
-                                    </a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-9">
+                        <div class="main-slider">
+                            <div id="carouselExampleIndicators2" class="carousel slide"
+                                 data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img
+                                            src="https://images.pexels.com/photos/2252584/pexels-photo-2252584.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                            class="img-fluid rounded"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="https://images.pexels.com/photos/1414651/pexels-photo-1414651.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                            class="img-fluid rounded"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img
+                                            src="https://images.pexels.com/photos/2893635/pexels-photo-2893635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                                            class="img-fluid rounded"
+                                            alt="...">
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="promotional-ads">
+                            <swiper class="swiper" :options="swiperOption">
+                                <swiper-slide>
+                                    <img
+                                        src="https://shop.redq.now.sh/_next/static/images/offer-1-1f7a4c9ea0ba5a216bc7af1f60d044e0.png"
+                                        class="img-fluid" alt="">
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <img
+                                        src="https://shop.redq.now.sh/_next/static/images/offer-2-90d3534e1ad62a8b8a977f1290e61e9f.png"
+                                        class="img-fluid" alt="">
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <img
+                                        src="https://shop.redq.now.sh/_next/static/images/offer-3-2f8285b13bef950f843cb4147666af6e.png"
+                                        class="img-fluid" alt="">
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <img
+                                        src="https://shop.redq.now.sh/_next/static/images/offer-1-1f7a4c9ea0ba5a216bc7af1f60d044e0.png"
+                                        class="img-fluid" alt="">
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <img
+                                        src="https://shop.redq.now.sh/_next/static/images/offer-2-90d3534e1ad62a8b8a977f1290e61e9f.png"
+                                        class="img-fluid" alt="">
+                                </swiper-slide>
+                                <swiper-slide>
+                                    <img
+                                        src="https://shop.redq.now.sh/_next/static/images/offer-3-2f8285b13bef950f843cb4147666af6e.png"
+                                        class="img-fluid" alt="">
+                                </swiper-slide>
+                                <div class="swiper-button-prev" slot="button-prev"></div>
+                                <div class="swiper-button-next" slot="button-next"></div>
+                            </swiper>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </header>
-
-        <main>
-            <section class="ads-slider">
-                <div class="container-fluid">
-                    <swiper class="swiper" :options="swiperOption">
-                        <swiper-slide>
-                            <img
-                                src="https://shop.redq.now.sh/_next/static/images/offer-1-1f7a4c9ea0ba5a216bc7af1f60d044e0.png"
-                                class="img-fluid" alt="">
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img
-                                src="https://shop.redq.now.sh/_next/static/images/offer-2-90d3534e1ad62a8b8a977f1290e61e9f.png"
-                                class="img-fluid" alt="">
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img
-                                src="https://shop.redq.now.sh/_next/static/images/offer-3-2f8285b13bef950f843cb4147666af6e.png"
-                                class="img-fluid" alt="">
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img
-                                src="https://shop.redq.now.sh/_next/static/images/offer-1-1f7a4c9ea0ba5a216bc7af1f60d044e0.png"
-                                class="img-fluid" alt="">
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img
-                                src="https://shop.redq.now.sh/_next/static/images/offer-2-90d3534e1ad62a8b8a977f1290e61e9f.png"
-                                class="img-fluid" alt="">
-                        </swiper-slide>
-                        <swiper-slide>
-                            <img
-                                src="https://shop.redq.now.sh/_next/static/images/offer-3-2f8285b13bef950f843cb4147666af6e.png"
-                                class="img-fluid" alt="">
-                        </swiper-slide>
-                        <div class="swiper-button-prev" slot="button-prev"></div>
-                        <div class="swiper-button-next" slot="button-next"></div>
-                    </swiper>
                 </div>
             </section>
 
             <section class="products-area" id="productsArea">
-                <div class="category-sidebar">
-                    <nav class="category-sidenav accordion" id="sidenavAccordion">
-                        <div class="category-sidenav-menu">
-                            <div class="nav">
-                                <a class="nav-link collapsed"
-                                   href="#"
-                                   data-toggle="collapse"
-                                   data-target="#fruitsAndVegetables"
-                                   aria-expanded="false"
-                                   aria-controls="fruitsAndVegetables">
-                                    <div class="category-sidenav-link-icon">
-                                        <i class="icofont-fruits"/>
-                                    </div>
-                                    Fruits & Vegetables
-                                </a>
-                                <div class="collapse"
-                                     id="fruitsAndVegetables"
-                                     aria-labelledby="headingOne"
-                                     data-parent="#sidenavAccordion">
-                                    <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Fruits
-                                        </a>
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Vegetables
-                                        </a>
-                                    </nav>
-                                </div>
-
-                                <a class="nav-link collapsed"
-                                   href="#"
-                                   data-toggle="collapse"
-                                   data-target="#meatAndFish"
-                                   aria-expanded="false"
-                                   aria-controls="meatAndFish">
-                                    <div class="category-sidenav-link-icon">
-                                        <i class="icofont-fish-5"/>
-                                    </div>
-                                    Meat & Fish
-                                </a>
-                                <div class="collapse"
-                                     id="meatAndFish"
-                                     aria-labelledby="headingOne"
-                                     data-parent="#sidenavAccordion">
-                                    <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Meat
-                                        </a>
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Fish
-                                        </a>
-                                    </nav>
-                                </div>
-
-                                <a class="nav-link collapsed"
-                                   href="#"
-                                   data-toggle="collapse"
-                                   data-target="#snacks"
-                                   aria-expanded="false"
-                                   aria-controls="snacks">
-                                    <div class="category-sidenav-link-icon">
-                                        <i class="icofont-bread"/>
-                                    </div>
-                                    Snacks
-                                </a>
-                                <div class="collapse"
-                                     id="snacks"
-                                     aria-labelledby="headingOne"
-                                     data-parent="#sidenavAccordion">
-                                    <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Biscuits
-                                        </a>
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Chocolates
-                                        </a>
-                                    </nav>
-                                </div>
-
-                                <a class="nav-link collapsed"
-                                   href="#"
-                                   data-toggle="collapse"
-                                   data-target="#petCare"
-                                   aria-expanded="false"
-                                   aria-controls="petCare">
-                                    <div class="category-sidenav-link-icon">
-                                        <i class="icofont-cat-alt-3"/>
-                                    </div>
-                                    Pet Care
-                                </a>
-                                <div class="collapse"
-                                     id="petCare"
-                                     aria-labelledby="headingOne"
-                                     data-parent="#sidenavAccordion">
-                                    <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Meat
-                                        </a>
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Fish
-                                        </a>
-                                    </nav>
-                                </div>
-
-                                <a class="nav-link collapsed"
-                                   href="#"
-                                   data-toggle="collapse"
-                                   data-target="#homeAndCleaning"
-                                   aria-expanded="false"
-                                   aria-controls="homeAndCleaning">
-                                    <div class="category-sidenav-link-icon">
-                                        <i class="icofont-paint-brush"/>
-                                    </div>
-                                    Home & Cleaning
-                                </a>
-                                <div class="collapse"
-                                     id="homeAndCleaning"
-                                     aria-labelledby="headingOne"
-                                     data-parent="#sidenavAccordion">
-                                    <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Meat
-                                        </a>
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Fish
-                                        </a>
-                                    </nav>
-                                </div>
-
-                                <a class="nav-link collapsed"
-                                   href="#"
-                                   data-toggle="collapse"
-                                   data-target="#dairy"
-                                   aria-expanded="false"
-                                   aria-controls="dairy">
-                                    <div class="category-sidenav-link-icon">
-                                        <i class="icofont-milk"/>
-                                    </div>
-                                    Dairy
-                                </a>
-                                <div class="collapse"
-                                     id="dairy"
-                                     aria-labelledby="headingOne"
-                                     data-parent="#sidenavAccordion">
-                                    <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Meat
-                                        </a>
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Fish
-                                        </a>
-                                    </nav>
-                                </div>
-
-                                <a class="nav-link collapsed"
-                                   href="#"
-                                   data-toggle="collapse"
-                                   data-target="#cooking"
-                                   aria-expanded="false"
-                                   aria-controls="cooking">
-                                    <div class="category-sidenav-link-icon">
-                                        <i class="icofont-muffin"/>
-                                    </div>
-                                    Cooking
-                                </a>
-                                <div class="collapse"
-                                     id="cooking"
-                                     aria-labelledby="headingOne"
-                                     data-parent="#sidenavAccordion">
-                                    <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Meat
-                                        </a>
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Fish
-                                        </a>
-                                    </nav>
-                                </div>
-
-                                <a class="nav-link collapsed"
-                                   href="#"
-                                   data-toggle="collapse"
-                                   data-target="#breakfast"
-                                   aria-expanded="false"
-                                   aria-controls="breakfast">
-                                    <div class="category-sidenav-link-icon">
-                                        <i class="icofont-fast-food"/>
-                                    </div>
-                                    Breakfast
-                                </a>
-                                <div class="collapse"
-                                     id="breakfast"
-                                     aria-labelledby="headingOne"
-                                     data-parent="#sidenavAccordion">
-                                    <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Meat
-                                        </a>
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Fish
-                                        </a>
-                                    </nav>
-                                </div>
-
-                                <a class="nav-link collapsed"
-                                   href="#"
-                                   data-toggle="collapse"
-                                   data-target="#beverage"
-                                   aria-expanded="false"
-                                   aria-controls="beverage">
-                                    <div class="category-sidenav-link-icon">
-                                        <i class="icofont-soft-drinks"/>
-                                    </div>
-                                    Beverage
-                                </a>
-                                <div class="collapse"
-                                     id="beverage"
-                                     aria-labelledby="headingOne"
-                                     data-parent="#sidenavAccordion">
-                                    <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Meat
-                                        </a>
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Fish
-                                        </a>
-                                    </nav>
-                                </div>
-
-                                <a class="nav-link collapsed"
-                                   href="#"
-                                   data-toggle="collapse"
-                                   data-target="#beautyAndHealth"
-                                   aria-expanded="false"
-                                   aria-controls="beautyAndHealth">
-                                    <div class="category-sidenav-link-icon">
-                                        <i class="icofont-heart-beat-alt"/>
-                                    </div>
-                                    Beauty & Health
-                                </a>
-                                <div class="collapse"
-                                     id="beautyAndHealth"
-                                     aria-labelledby="headingOne"
-                                     data-parent="#sidenavAccordion">
-                                    <nav class="category-sidenav-menu-nested nav">
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Meat
-                                        </a>
-                                        <a class="nav-link" href="/">
-                                            <i class="icofont-minus"/> Fish
-                                        </a>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
+                <div class="products-group-title">
+                    <h4 class="mb-0">
+                        <span>
+                            Groceries
+                        </span>
+                    </h4>
                 </div>
                 <div class="all-products">
                     <div class="product-card" v-for="(product, index) in products" :key="index">
@@ -472,21 +473,28 @@
                     },
                     breakpoints: {
                         1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 40
+                            slidesPerView: 2,
+                            spaceBetween: 10
                         },
                         768: {
-                            slidesPerView: 3,
-                            spaceBetween: 30
+                            slidesPerView: 2,
+                            spaceBetween: 10
                         },
                         640: {
                             slidesPerView: 2,
-                            spaceBetween: 20
+                            spaceBetween: 10
                         },
                         320: {
                             slidesPerView: 1,
                             spaceBetween: 10
                         }
+                    }
+                },
+                swiperOptionMainSlider: {
+                    direction: 'vertical',
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
                     }
                 },
                 products: [

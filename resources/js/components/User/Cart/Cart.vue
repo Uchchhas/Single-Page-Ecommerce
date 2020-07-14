@@ -118,8 +118,7 @@
         <a href="#" type="button" class="sticky-cart-button" @click.prevent="openNav">
             <div class="text-white mb-3 font-weight-bold text-center">
                 <i class="icofont-cart-alt"/>
-                <template v-if="cart_items.length == 0">0 Items</template>
-                <template v-else>{{ cart_items.length }} Items</template>
+                0 Items
             </div>
             <div class="bg-white py-1 px-3 text-center font-weight-bold text-brand-color rounded">
                 $00.00

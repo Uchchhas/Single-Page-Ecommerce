@@ -14,6 +14,14 @@
     </head>
     <body>
         <div id="app">
+            @section('cart')
+                <cart-component></cart-component>
+            @show
+
+            @section('navbar')
+                    <navbar-component></navbar-component>
+            @show
+
             @yield('content')
         </div>
 

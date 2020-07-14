@@ -1,10 +1,6 @@
 <template>
     <div>
-        <cart-component/>
-
-        <navbar-component :navbar-class="'navbar-fixed-top'"/>
-
-        <main class="pt-140">
+        <main>
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-sm-8">

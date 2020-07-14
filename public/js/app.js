@@ -2115,7 +2115,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Cart",
   props: ['cart_items'],
@@ -2157,10 +2156,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
 //
 //
 //
@@ -2688,10 +2683,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ConfirmOrder"
 });
@@ -2707,10 +2698,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
 //
 //
 //
@@ -3292,6 +3279,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "HomeComponent",
   data: function data() {
@@ -3305,21 +3293,28 @@ __webpack_require__.r(__webpack_exports__);
         },
         breakpoints: {
           1024: {
-            slidesPerView: 3,
-            spaceBetween: 40
+            slidesPerView: 2,
+            spaceBetween: 10
           },
           768: {
-            slidesPerView: 3,
-            spaceBetween: 30
+            slidesPerView: 2,
+            spaceBetween: 10
           },
           640: {
             slidesPerView: 2,
-            spaceBetween: 20
+            spaceBetween: 10
           },
           320: {
             slidesPerView: 1,
             spaceBetween: 10
           }
+        }
+      },
+      swiperOptionMainSlider: {
+        direction: 'vertical',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
         }
       },
       products: [{
@@ -3611,14 +3606,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Navbar",
-  props: {
-    navbarClass: {
-      type: String,
-      "default": ''
-    }
-  }
+  name: "Navbar"
 });
 
 /***/ }),
@@ -3632,10 +3639,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
 //
 //
 //
@@ -50175,18 +50178,7 @@ var render = function() {
         }
       },
       [
-        _c(
-          "div",
-          { staticClass: "text-white mb-3 font-weight-bold text-center" },
-          [
-            _c("i", { staticClass: "icofont-cart-alt" }),
-            _vm._v(" "),
-            _vm.cart_items.length == 0
-              ? [_vm._v("0 Items")]
-              : [_vm._v(_vm._s(_vm.cart_items.length) + " Items")]
-          ],
-          2
-        ),
+        _vm._m(4),
         _vm._v(" "),
         _c(
           "div",
@@ -50380,6 +50372,19 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("span", { staticClass: "price-tag" }, [_vm._v("$1.50")])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "text-white mb-3 font-weight-bold text-center" },
+      [
+        _c("i", { staticClass: "icofont-cart-alt" }),
+        _vm._v("\n            0 Items\n        ")
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -50403,504 +50408,488 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("cart-component"),
-      _vm._v(" "),
-      _c("navbar-component", { attrs: { "navbar-class": "navbar-fixed-top" } }),
-      _vm._v(" "),
-      _c("main", { staticClass: "pt-140" }, [
-        _c("div", { staticClass: "container" }, [
-          _c("div", { staticClass: "row" }, [
-            _c("div", { staticClass: "col-12 col-sm-8" }, [
-              _c("div", { staticClass: "checkout-information-wrapper" }, [
-                _c(
-                  "div",
-                  { staticClass: "card bg-white shadow border-0 mb-3" },
-                  [
-                    _vm._m(0),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card-body" }, [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-6 col-sm-4" }, [
-                          _c("div", { staticClass: "list" }, [
-                            _c("h6", { staticClass: "font-weight-bold" }, [
-                              _vm._v("Home")
-                            ]),
-                            _vm._v(
-                              "\n                                            27 Street, 2569 "
-                            ),
-                            _c("br"),
-                            _vm._v(
-                              "\n                                            Heritage Road Visalia, "
-                            ),
-                            _c("br"),
-                            _vm._v(
-                              "\n                                            CA 93291\n                                            "
-                            ),
-                            _c("div", { staticClass: "list-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "edit",
-                                  attrs: { href: "#" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "icofont-edit-alt" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "delete",
-                                  attrs: { href: "#" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "icofont-close-line" })]
-                              )
-                            ])
-                          ])
+  return _c("div", [
+    _c("main", [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-12 col-sm-8" }, [
+            _c("div", { staticClass: "checkout-information-wrapper" }, [
+              _c("div", { staticClass: "card bg-white shadow border-0 mb-3" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-6 col-sm-4" }, [
+                      _c("div", { staticClass: "list" }, [
+                        _c("h6", { staticClass: "font-weight-bold" }, [
+                          _vm._v("Home")
                         ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-6 col-sm-4" }, [
-                          _c("div", { staticClass: "list active" }, [
-                            _c("h6", { staticClass: "font-weight-bold" }, [
-                              _vm._v("Office")
-                            ]),
-                            _vm._v(
-                              "\n                                            27 Street, 2569 "
-                            ),
-                            _c("br"),
-                            _vm._v(
-                              "\n                                            Heritage Road Visalia, "
-                            ),
-                            _c("br"),
-                            _vm._v(
-                              "\n                                            CA 93291\n                                            "
-                            ),
-                            _c("div", { staticClass: "list-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "edit",
-                                  attrs: { href: "#" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "icofont-edit-alt" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "delete",
-                                  attrs: { href: "#" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "icofont-close-line" })]
-                              )
-                            ])
-                          ])
-                        ])
-                      ])
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _vm._m(1),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "card bg-white shadow border-0 mb-3" },
-                  [
-                    _vm._m(2),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card-body" }, [
-                      _c("div", { staticClass: "row" }, [
-                        _c("div", { staticClass: "col-6 col-sm-4" }, [
-                          _c("div", { staticClass: "list active" }, [
-                            _c("h6", { staticClass: "font-weight-bold" }, [
-                              _vm._v("Primary")
-                            ]),
-                            _vm._v(
-                              "\n                                            202-555-0191\n                                            "
-                            ),
-                            _c("div", { staticClass: "list-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "edit",
-                                  attrs: { href: "#" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "icofont-edit-alt" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "delete",
-                                  attrs: { href: "#" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "icofont-close-line" })]
-                              )
-                            ])
-                          ])
-                        ]),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "col-6 col-sm-4" }, [
-                          _c("div", { staticClass: "list" }, [
-                            _c("h6", { staticClass: "font-weight-bold" }, [
-                              _vm._v("Secondary")
-                            ]),
-                            _vm._v(
-                              "\n                                            202-555-0701\n                                            "
-                            ),
-                            _c("div", { staticClass: "list-action" }, [
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "edit",
-                                  attrs: { href: "#" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "icofont-edit-alt" })]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass: "delete",
-                                  attrs: { href: "#" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                    }
-                                  }
-                                },
-                                [_c("i", { staticClass: "icofont-close-line" })]
-                              )
-                            ])
-                          ])
-                        ])
-                      ])
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "card bg-white shadow border-0 mb-5 payment-option-card"
-                  },
-                  [
-                    _vm._m(3),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card-body" }, [
-                      _vm._m(4),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "mb-4" },
-                        [
+                        _vm._v(
+                          "\n                                            27 Street, 2569 "
+                        ),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Heritage Road Visalia, "
+                        ),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            CA 93291\n                                            "
+                        ),
+                        _c("div", { staticClass: "list-action" }, [
                           _c(
-                            "swiper",
+                            "a",
                             {
-                              staticClass: "swiper",
-                              attrs: { options: _vm.swiperOption }
+                              staticClass: "edit",
+                              attrs: { href: "#" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                }
+                              }
                             },
-                            [
-                              _c("swiper-slide", [
-                                _c("div", { staticClass: "list active" }, [
-                                  _c("img", {
-                                    staticClass: "mb-2",
-                                    attrs: {
-                                      src: "/images/mastercard.png",
-                                      alt: ""
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "p",
-                                    { staticClass: "text-muted font-size-80" },
-                                    [_vm._v("Card number")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("p", { staticClass: "font-size-80" }, [
-                                    _vm._v(
-                                      "\n                                                    ****\n                                                    ****\n                                                    ****\n                                                    8724\n                                                "
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "h6",
-                                    {
-                                      staticClass:
-                                        "font-weight-bold font-size-80 mb-0"
-                                    },
-                                    [_vm._v("Jhon Doe Smith")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "list-action" }, [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "delete",
-                                        attrs: { href: "#" },
-                                        on: {
-                                          click: function($event) {
-                                            $event.preventDefault()
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "icofont-close-line"
-                                        })
-                                      ]
-                                    )
-                                  ])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("swiper-slide", [
-                                _c("div", { staticClass: "list" }, [
-                                  _c("img", {
-                                    staticClass: "mb-2",
-                                    attrs: { src: "/images/visa.png", alt: "" }
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "p",
-                                    { staticClass: "text-muted font-size-80" },
-                                    [_vm._v("Card number")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("p", { staticClass: "font-size-80" }, [
-                                    _vm._v(
-                                      "\n                                                    ****\n                                                    ****\n                                                    ****\n                                                    8724\n                                                "
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "h6",
-                                    {
-                                      staticClass:
-                                        "font-weight-bold font-size-80 mb-0"
-                                    },
-                                    [_vm._v("Jhon Doe Smith")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "list-action" }, [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "delete",
-                                        attrs: { href: "#" },
-                                        on: {
-                                          click: function($event) {
-                                            $event.preventDefault()
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "icofont-close-line"
-                                        })
-                                      ]
-                                    )
-                                  ])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("swiper-slide", [
-                                _c("div", { staticClass: "list" }, [
-                                  _c("img", {
-                                    staticClass: "mb-2",
-                                    attrs: { src: "/images/visa.png", alt: "" }
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "p",
-                                    { staticClass: "text-muted font-size-80" },
-                                    [_vm._v("Card number")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("p", { staticClass: "font-size-80" }, [
-                                    _vm._v(
-                                      "\n                                                    ****\n                                                    ****\n                                                    ****\n                                                    8724\n                                                "
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "h6",
-                                    {
-                                      staticClass:
-                                        "font-weight-bold font-size-80 mb-0"
-                                    },
-                                    [_vm._v("Jhon Doe Smith")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "list-action" }, [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "delete",
-                                        attrs: { href: "#" },
-                                        on: {
-                                          click: function($event) {
-                                            $event.preventDefault()
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "icofont-close-line"
-                                        })
-                                      ]
-                                    )
-                                  ])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("swiper-slide", [
-                                _c("div", { staticClass: "list" }, [
-                                  _c("img", {
-                                    staticClass: "mb-2",
-                                    attrs: {
-                                      src: "/images/mastercard.png",
-                                      alt: ""
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "p",
-                                    { staticClass: "text-muted font-size-80" },
-                                    [_vm._v("Card number")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("p", { staticClass: "font-size-80" }, [
-                                    _vm._v(
-                                      "\n                                                    ****\n                                                    ****\n                                                    ****\n                                                    8724\n                                                "
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "h6",
-                                    {
-                                      staticClass:
-                                        "font-weight-bold font-size-80 mb-0"
-                                    },
-                                    [_vm._v("Jhon Doe Smith")]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "list-action" }, [
-                                    _c(
-                                      "a",
-                                      {
-                                        staticClass: "delete",
-                                        attrs: { href: "#" },
-                                        on: {
-                                          click: function($event) {
-                                            $event.preventDefault()
-                                          }
-                                        }
-                                      },
-                                      [
-                                        _c("i", {
-                                          staticClass: "icofont-close-line"
-                                        })
-                                      ]
-                                    )
-                                  ])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("div", {
-                                staticClass: "swiper-button-prev",
-                                attrs: { slot: "button-prev" },
-                                slot: "button-prev"
-                              }),
-                              _vm._v(" "),
-                              _c("div", {
-                                staticClass: "swiper-button-next",
-                                attrs: { slot: "button-next" },
-                                slot: "button-next"
-                              })
-                            ],
-                            1
+                            [_c("i", { staticClass: "icofont-edit-alt" })]
                           ),
                           _vm._v(" "),
-                          _c("div", { staticClass: "col-6 col-sm-4" })
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _vm._m(5),
-                      _vm._v(" "),
-                      _vm._m(6),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-lg btn-block btn-brand",
-                          attrs: { href: "/order-details" }
-                        },
-                        [
-                          _vm._v(
-                            "\n                                    Proceed to Checkout\n                                "
+                          _c(
+                            "a",
+                            {
+                              staticClass: "delete",
+                              attrs: { href: "#" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "icofont-close-line" })]
                           )
-                        ]
-                      )
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-6 col-sm-4" }, [
+                      _c("div", { staticClass: "list active" }, [
+                        _c("h6", { staticClass: "font-weight-bold" }, [
+                          _vm._v("Office")
+                        ]),
+                        _vm._v(
+                          "\n                                            27 Street, 2569 "
+                        ),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            Heritage Road Visalia, "
+                        ),
+                        _c("br"),
+                        _vm._v(
+                          "\n                                            CA 93291\n                                            "
+                        ),
+                        _c("div", { staticClass: "list-action" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "edit",
+                              attrs: { href: "#" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "icofont-edit-alt" })]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "delete",
+                              attrs: { href: "#" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "icofont-close-line" })]
+                          )
+                        ])
+                      ])
                     ])
-                  ]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _vm._m(7)
-          ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "card bg-white shadow border-0 mb-3" }, [
+                _vm._m(2),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-6 col-sm-4" }, [
+                      _c("div", { staticClass: "list active" }, [
+                        _c("h6", { staticClass: "font-weight-bold" }, [
+                          _vm._v("Primary")
+                        ]),
+                        _vm._v(
+                          "\n                                            202-555-0191\n                                            "
+                        ),
+                        _c("div", { staticClass: "list-action" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "edit",
+                              attrs: { href: "#" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "icofont-edit-alt" })]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "delete",
+                              attrs: { href: "#" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "icofont-close-line" })]
+                          )
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-6 col-sm-4" }, [
+                      _c("div", { staticClass: "list" }, [
+                        _c("h6", { staticClass: "font-weight-bold" }, [
+                          _vm._v("Secondary")
+                        ]),
+                        _vm._v(
+                          "\n                                            202-555-0701\n                                            "
+                        ),
+                        _c("div", { staticClass: "list-action" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "edit",
+                              attrs: { href: "#" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "icofont-edit-alt" })]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "delete",
+                              attrs: { href: "#" },
+                              on: {
+                                click: function($event) {
+                                  $event.preventDefault()
+                                }
+                              }
+                            },
+                            [_c("i", { staticClass: "icofont-close-line" })]
+                          )
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "card bg-white shadow border-0 mb-5 payment-option-card"
+                },
+                [
+                  _vm._m(3),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "card-body" }, [
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "mb-4" },
+                      [
+                        _c(
+                          "swiper",
+                          {
+                            staticClass: "swiper",
+                            attrs: { options: _vm.swiperOption }
+                          },
+                          [
+                            _c("swiper-slide", [
+                              _c("div", { staticClass: "list active" }, [
+                                _c("img", {
+                                  staticClass: "mb-2",
+                                  attrs: {
+                                    src: "/images/mastercard.png",
+                                    alt: ""
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  { staticClass: "text-muted font-size-80" },
+                                  [_vm._v("Card number")]
+                                ),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "font-size-80" }, [
+                                  _vm._v(
+                                    "\n                                                    ****\n                                                    ****\n                                                    ****\n                                                    8724\n                                                "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "h6",
+                                  {
+                                    staticClass:
+                                      "font-weight-bold font-size-80 mb-0"
+                                  },
+                                  [_vm._v("Jhon Doe Smith")]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "list-action" }, [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "delete",
+                                      attrs: { href: "#" },
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "icofont-close-line"
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("swiper-slide", [
+                              _c("div", { staticClass: "list" }, [
+                                _c("img", {
+                                  staticClass: "mb-2",
+                                  attrs: { src: "/images/visa.png", alt: "" }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  { staticClass: "text-muted font-size-80" },
+                                  [_vm._v("Card number")]
+                                ),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "font-size-80" }, [
+                                  _vm._v(
+                                    "\n                                                    ****\n                                                    ****\n                                                    ****\n                                                    8724\n                                                "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "h6",
+                                  {
+                                    staticClass:
+                                      "font-weight-bold font-size-80 mb-0"
+                                  },
+                                  [_vm._v("Jhon Doe Smith")]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "list-action" }, [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "delete",
+                                      attrs: { href: "#" },
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "icofont-close-line"
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("swiper-slide", [
+                              _c("div", { staticClass: "list" }, [
+                                _c("img", {
+                                  staticClass: "mb-2",
+                                  attrs: { src: "/images/visa.png", alt: "" }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  { staticClass: "text-muted font-size-80" },
+                                  [_vm._v("Card number")]
+                                ),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "font-size-80" }, [
+                                  _vm._v(
+                                    "\n                                                    ****\n                                                    ****\n                                                    ****\n                                                    8724\n                                                "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "h6",
+                                  {
+                                    staticClass:
+                                      "font-weight-bold font-size-80 mb-0"
+                                  },
+                                  [_vm._v("Jhon Doe Smith")]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "list-action" }, [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "delete",
+                                      attrs: { href: "#" },
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "icofont-close-line"
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("swiper-slide", [
+                              _c("div", { staticClass: "list" }, [
+                                _c("img", {
+                                  staticClass: "mb-2",
+                                  attrs: {
+                                    src: "/images/mastercard.png",
+                                    alt: ""
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "p",
+                                  { staticClass: "text-muted font-size-80" },
+                                  [_vm._v("Card number")]
+                                ),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "font-size-80" }, [
+                                  _vm._v(
+                                    "\n                                                    ****\n                                                    ****\n                                                    ****\n                                                    8724\n                                                "
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "h6",
+                                  {
+                                    staticClass:
+                                      "font-weight-bold font-size-80 mb-0"
+                                  },
+                                  [_vm._v("Jhon Doe Smith")]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "list-action" }, [
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass: "delete",
+                                      attrs: { href: "#" },
+                                      on: {
+                                        click: function($event) {
+                                          $event.preventDefault()
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "icofont-close-line"
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", {
+                              staticClass: "swiper-button-prev",
+                              attrs: { slot: "button-prev" },
+                              slot: "button-prev"
+                            }),
+                            _vm._v(" "),
+                            _c("div", {
+                              staticClass: "swiper-button-next",
+                              attrs: { slot: "button-next" },
+                              slot: "button-next"
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-6 col-sm-4" })
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _vm._m(5),
+                    _vm._v(" "),
+                    _vm._m(6),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn btn-lg btn-block btn-brand",
+                        attrs: { href: "/order-details" }
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    Proceed to Checkout\n                                "
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(7)
         ])
-      ]),
-      _vm._v(" "),
-      _vm._m(8),
-      _vm._v(" "),
-      _vm._m(9),
-      _vm._v(" "),
-      _vm._m(10)
-    ],
-    1
-  )
+      ])
+    ]),
+    _vm._v(" "),
+    _vm._m(8),
+    _vm._v(" "),
+    _vm._m(9),
+    _vm._v(" "),
+    _vm._m(10)
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -51483,224 +51472,219 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("cart-component"),
-      _vm._v(" "),
-      _c("navbar-component", { attrs: { "navbar-class": "navbar-fixed-top" } }),
-      _vm._v(" "),
-      _vm._m(0)
-    ],
-    1
-  )
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("main", { staticClass: "pt-140" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "card border-0 bg-white rounded mb-5" }, [
-          _c(
-            "div",
-            {
-              staticClass: "card-header p-3 text-right bg-transparent border-0"
-            },
-            [
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn-outline-secondary",
-                  attrs: { href: "#" }
-                },
-                [
-                  _vm._v(
-                    "\n                        Back to Home\n                    "
-                  )
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body p-5" }, [
-            _c("div", { staticClass: "mb-4" }, [
-              _c("h4", { staticClass: "font-weight-bold mb-4" }, [
-                _vm._v("Order Received")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "mb-4" }, [
-                _vm._v("Thank you. Your order has been received")
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-sm-3" }, [
-                  _c("h6", { staticClass: "font-weight-bold" }, [
-                    _vm._v("Order Number")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-muted" }, [_vm._v("1444")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-3" }, [
-                  _c("h6", { staticClass: "font-weight-bold" }, [
-                    _vm._v("Date")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-muted" }, [
-                    _vm._v("March 14, 2019")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-3" }, [
-                  _c("h6", { staticClass: "font-weight-bold" }, [
-                    _vm._v("Total")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-muted" }, [_vm._v("$10,944.00")])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-3" }, [
-                  _c("h6", { staticClass: "font-weight-bold" }, [
-                    _vm._v("Payment Method")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "text-muted" }, [
-                    _vm._v("Cash on delivery")
-                  ])
-                ])
-              ])
-            ]),
+    return _c("div", [
+      _c("main", [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "card border-0 bg-white rounded mb-5" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "card-header p-3 text-right bg-transparent border-0"
+              },
+              [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-outline-secondary",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _vm._v(
+                      "\n                        Back to Home\n                    "
+                    )
+                  ]
+                )
+              ]
+            ),
             _vm._v(" "),
-            _c("div", { staticClass: "mb-4" }, [
-              _c("h4", { staticClass: "font-weight-bold mb-4" }, [
-                _vm._v("Order Details")
-              ]),
-              _vm._v(" "),
-              _c("table", { staticClass: "table" }, [
-                _c("tbody", [
-                  _c("tr", [
-                    _c(
-                      "th",
-                      { staticClass: "font-weight-bold border-0 pl-0" },
-                      [_vm._v("Total Item")]
-                    ),
+            _c("div", { staticClass: "card-body p-5" }, [
+              _c("div", { staticClass: "mb-4" }, [
+                _c("h4", { staticClass: "font-weight-bold mb-4" }, [
+                  _vm._v("Order Received")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "mb-4" }, [
+                  _vm._v("Thank you. Your order has been received")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-sm-3" }, [
+                    _c("h6", { staticClass: "font-weight-bold" }, [
+                      _vm._v("Order Number")
+                    ]),
                     _vm._v(" "),
-                    _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                    _c("p", { staticClass: "text-muted" }, [_vm._v("1444")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-3" }, [
+                    _c("h6", { staticClass: "font-weight-bold" }, [
+                      _vm._v("Date")
+                    ]),
                     _vm._v(" "),
-                    _c("td", { staticClass: "text-muted border-0" }, [
-                      _vm._v("6 Items")
+                    _c("p", { staticClass: "text-muted" }, [
+                      _vm._v("March 14, 2019")
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("tr", [
-                    _c(
-                      "th",
-                      { staticClass: "font-weight-bold border-0 pl-0" },
-                      [_vm._v("Order Time")]
-                    ),
+                  _c("div", { staticClass: "col-sm-3" }, [
+                    _c("h6", { staticClass: "font-weight-bold" }, [
+                      _vm._v("Total")
+                    ]),
                     _vm._v(" "),
-                    _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-muted border-0" }, [
-                      _vm._v("1.00pm 10/12/19")
+                    _c("p", { staticClass: "text-muted" }, [
+                      _vm._v("$10,944.00")
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("tr", [
-                    _c(
-                      "th",
-                      { staticClass: "font-weight-bold border-0 pl-0" },
-                      [_vm._v("Delivery Time")]
-                    ),
+                  _c("div", { staticClass: "col-sm-3" }, [
+                    _c("h6", { staticClass: "font-weight-bold" }, [
+                      _vm._v("Payment Method")
+                    ]),
                     _vm._v(" "),
-                    _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-muted border-0" }, [
-                      _vm._v("90 Minute Express Delivery")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c(
-                      "th",
-                      { staticClass: "font-weight-bold border-0 pl-0" },
-                      [_vm._v("Delivery Location")]
-                    ),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-muted border-0" }, [
-                      _vm._v(
-                        "1st Floor, House 149, Road-22, Mohakhali DOHS, Dhaka - North"
-                      )
+                    _c("p", { staticClass: "text-muted" }, [
+                      _vm._v("Cash on delivery")
                     ])
                   ])
                 ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", [
-              _c("h4", { staticClass: "font-weight-bold mb-4" }, [
-                _vm._v("Total Amount")
               ]),
               _vm._v(" "),
-              _c("table", { staticClass: "table" }, [
-                _c("tbody", [
-                  _c("tr", [
-                    _c(
-                      "th",
-                      { staticClass: "font-weight-bold border-0 pl-0" },
-                      [_vm._v("Sub Total")]
-                    ),
+              _c("div", { staticClass: "mb-4" }, [
+                _c("h4", { staticClass: "font-weight-bold mb-4" }, [
+                  _vm._v("Order Details")
+                ]),
+                _vm._v(" "),
+                _c("table", { staticClass: "table" }, [
+                  _c("tbody", [
+                    _c("tr", [
+                      _c(
+                        "th",
+                        { staticClass: "font-weight-bold border-0 pl-0" },
+                        [_vm._v("Total Item")]
+                      ),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-muted border-0" }, [
+                        _vm._v("6 Items")
+                      ])
+                    ]),
                     _vm._v(" "),
-                    _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                    _c("tr", [
+                      _c(
+                        "th",
+                        { staticClass: "font-weight-bold border-0 pl-0" },
+                        [_vm._v("Order Time")]
+                      ),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-muted border-0" }, [
+                        _vm._v("1.00pm 10/12/19")
+                      ])
+                    ]),
                     _vm._v(" "),
-                    _c("td", { staticClass: "text-muted border-0" }, [
-                      _vm._v("$10,864.00")
+                    _c("tr", [
+                      _c(
+                        "th",
+                        { staticClass: "font-weight-bold border-0 pl-0" },
+                        [_vm._v("Delivery Time")]
+                      ),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-muted border-0" }, [
+                        _vm._v("90 Minute Express Delivery")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c(
+                        "th",
+                        { staticClass: "font-weight-bold border-0 pl-0" },
+                        [_vm._v("Delivery Location")]
+                      ),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-muted border-0" }, [
+                        _vm._v(
+                          "1st Floor, House 149, Road-22, Mohakhali DOHS, Dhaka - North"
+                        )
+                      ])
                     ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c(
-                      "th",
-                      { staticClass: "font-weight-bold border-0 pl-0" },
-                      [_vm._v("Payment Method")]
-                    ),
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("h4", { staticClass: "font-weight-bold mb-4" }, [
+                  _vm._v("Total Amount")
+                ]),
+                _vm._v(" "),
+                _c("table", { staticClass: "table" }, [
+                  _c("tbody", [
+                    _c("tr", [
+                      _c(
+                        "th",
+                        { staticClass: "font-weight-bold border-0 pl-0" },
+                        [_vm._v("Sub Total")]
+                      ),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-muted border-0" }, [
+                        _vm._v("$10,864.00")
+                      ])
+                    ]),
                     _vm._v(" "),
-                    _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                    _c("tr", [
+                      _c(
+                        "th",
+                        { staticClass: "font-weight-bold border-0 pl-0" },
+                        [_vm._v("Payment Method")]
+                      ),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-muted border-0" }, [
+                        _vm._v("Cash On Delivery")
+                      ])
+                    ]),
                     _vm._v(" "),
-                    _c("td", { staticClass: "text-muted border-0" }, [
-                      _vm._v("Cash On Delivery")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c(
-                      "th",
-                      { staticClass: "font-weight-bold border-0 pl-0" },
-                      [_vm._v("Cash on delivery")]
-                    ),
+                    _c("tr", [
+                      _c(
+                        "th",
+                        { staticClass: "font-weight-bold border-0 pl-0" },
+                        [_vm._v("Cash on delivery")]
+                      ),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-muted border-0" }, [
+                        _vm._v("10")
+                      ])
+                    ]),
                     _vm._v(" "),
-                    _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-muted border-0" }, [
-                      _vm._v("10")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c(
-                      "th",
-                      { staticClass: "font-weight-bold border-0 pl-0" },
-                      [_vm._v("Total")]
-                    ),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
-                    _vm._v(" "),
-                    _c("td", { staticClass: "text-muted border-0" }, [
-                      _vm._v("$10,874.00")
+                    _c("tr", [
+                      _c(
+                        "th",
+                        { staticClass: "font-weight-bold border-0 pl-0" },
+                        [_vm._v("Total")]
+                      ),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border-0" }, [_vm._v(":")]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-muted border-0" }, [
+                        _vm._v("$10,874.00")
+                      ])
                     ])
                   ])
                 ])
@@ -51733,303 +51717,297 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("cart-component"),
-      _vm._v(" "),
-      _c("navbar-component", { attrs: { "navbar-class": "navbar-fixed-top" } }),
-      _vm._v(" "),
-      _vm._m(0)
-    ],
-    1
-  )
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("main", { staticClass: "pt-140" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c(
-            "div",
-            { staticClass: "col-12 col-sm-10 col-md-10 col-lg-10 col-xl-9" },
-            [
-              _c("div", { staticClass: "faq-wrapper" }, [
-                _c("h4", { staticClass: "text-center font-weight-bold mb-3" }, [
-                  _vm._v("F.A.Q")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "accordion",
-                    attrs: { id: "accordionExample" }
-                  },
-                  [
-                    _c("div", { staticClass: "card border mb-2" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "card-header bg-white border-0",
-                          attrs: { id: "headingOne" }
-                        },
-                        [
-                          _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
-                            _c(
-                              "a",
-                              {
-                                staticClass:
-                                  "d-block position-relative text-dark collapsible-link py-3",
-                                attrs: {
-                                  href: "#",
-                                  "data-toggle": "collapse",
-                                  "data-target": "#collapseOne",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapseOne"
-                                }
-                              },
-                              [
-                                _vm._v(
-                                  "\n                                            How to contact with Customer Service?\n                                        "
-                                )
-                              ]
-                            )
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "collapse",
-                          attrs: {
-                            id: "collapseOne",
-                            "aria-labelledby": "headingOne",
-                            "data-parent": "#accordionExample"
-                          }
-                        },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "card-body pt-0 px-4 pb-4" },
-                            [
+    return _c("div", [
+      _c("main", [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row justify-content-center" }, [
+            _c(
+              "div",
+              { staticClass: "col-12 col-sm-10 col-md-10 col-lg-10 col-xl-9" },
+              [
+                _c("div", { staticClass: "faq-wrapper" }, [
+                  _c(
+                    "h4",
+                    { staticClass: "text-center font-weight-bold mb-3" },
+                    [_vm._v("F.A.Q")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "accordion",
+                      attrs: { id: "accordionExample" }
+                    },
+                    [
+                      _c("div", { staticClass: "card border mb-2" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "card-header bg-white border-0",
+                            attrs: { id: "headingOne" }
+                          },
+                          [
+                            _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
                               _c(
-                                "p",
+                                "a",
                                 {
                                   staticClass:
-                                    "font-weight-light text-muted m-0"
+                                    "d-block position-relative text-dark collapsible-link py-3",
+                                  attrs: {
+                                    href: "#",
+                                    "data-toggle": "collapse",
+                                    "data-target": "#collapseOne",
+                                    "aria-expanded": "false",
+                                    "aria-controls": "collapseOne"
+                                  }
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                            Our Customer Experience Team is available 7 days a week and we offer 2 ways to get in contact.Email and Chat . We try to reply quickly, so you need not to wait too long for a response!.\n                                        "
+                                    "\n                                            How to contact with Customer Service?\n                                        "
                                   )
                                 ]
                               )
-                            ]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card border mb-2" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "card-header bg-white border-0",
-                          attrs: { id: "headingTwo" }
-                        },
-                        [
-                          _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "collapse",
+                            attrs: {
+                              id: "collapseOne",
+                              "aria-labelledby": "headingOne",
+                              "data-parent": "#accordionExample"
+                            }
+                          },
+                          [
                             _c(
-                              "a",
-                              {
-                                staticClass:
-                                  "d-block position-relative collapsed text-dark collapsible-link py-3",
-                                attrs: {
-                                  href: "#",
-                                  "data-toggle": "collapse",
-                                  "data-target": "#collapseTwo",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapseTwo"
-                                }
-                              },
+                              "div",
+                              { staticClass: "card-body pt-0 px-4 pb-4" },
                               [
-                                _vm._v(
-                                  "\n                                            App installation failed, how to update system information?\n                                        "
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass:
+                                      "font-weight-light text-muted m-0"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                            Our Customer Experience Team is available 7 days a week and we offer 2 ways to get in contact.Email and Chat . We try to reply quickly, so you need not to wait too long for a response!.\n                                        "
+                                    )
+                                  ]
                                 )
                               ]
                             )
-                          ])
-                        ]
-                      ),
+                          ]
+                        )
+                      ]),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "collapse",
-                          attrs: {
-                            id: "collapseTwo",
-                            "aria-labelledby": "headingTwo",
-                            "data-parent": "#accordionExample"
-                          }
-                        },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "card-body pt-0 px-4 pb-4" },
-                            [
+                      _c("div", { staticClass: "card border mb-2" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "card-header bg-white border-0",
+                            attrs: { id: "headingTwo" }
+                          },
+                          [
+                            _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
                               _c(
-                                "p",
+                                "a",
                                 {
                                   staticClass:
-                                    "font-weight-light text-muted m-0"
+                                    "d-block position-relative collapsed text-dark collapsible-link py-3",
+                                  attrs: {
+                                    href: "#",
+                                    "data-toggle": "collapse",
+                                    "data-target": "#collapseTwo",
+                                    "aria-expanded": "false",
+                                    "aria-controls": "collapseTwo"
+                                  }
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                            Please read the documentation carefully . We also have some online video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum\n                                        "
+                                    "\n                                            App installation failed, how to update system information?\n                                        "
                                   )
                                 ]
                               )
-                            ]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card border mb-2" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "card-header bg-white border-0",
-                          attrs: { id: "headingThree" }
-                        },
-                        [
-                          _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "collapse",
+                            attrs: {
+                              id: "collapseTwo",
+                              "aria-labelledby": "headingTwo",
+                              "data-parent": "#accordionExample"
+                            }
+                          },
+                          [
                             _c(
-                              "a",
-                              {
-                                staticClass:
-                                  "d-block position-relative collapsed text-dark collapsible-link py-3",
-                                attrs: {
-                                  href: "#",
-                                  "data-toggle": "collapse",
-                                  "data-target": "#collapseThree",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapseThree"
-                                }
-                              },
+                              "div",
+                              { staticClass: "card-body pt-0 px-4 pb-4" },
                               [
-                                _vm._v(
-                                  "\n                                            Website reponse taking time, how to improve?\n                                        "
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass:
+                                      "font-weight-light text-muted m-0"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                            Please read the documentation carefully . We also have some online video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum\n                                        "
+                                    )
+                                  ]
                                 )
                               ]
                             )
-                          ])
-                        ]
-                      ),
+                          ]
+                        )
+                      ]),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "collapse",
-                          attrs: {
-                            id: "collapseThree",
-                            "aria-labelledby": "headingThree",
-                            "data-parent": "#accordionExample"
-                          }
-                        },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "card-body pt-0 px-4 pb-4" },
-                            [
+                      _c("div", { staticClass: "card border mb-2" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "card-header bg-white border-0",
+                            attrs: { id: "headingThree" }
+                          },
+                          [
+                            _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
                               _c(
-                                "p",
+                                "a",
                                 {
                                   staticClass:
-                                    "font-weight-light text-muted m-0"
+                                    "d-block position-relative collapsed text-dark collapsible-link py-3",
+                                  attrs: {
+                                    href: "#",
+                                    "data-toggle": "collapse",
+                                    "data-target": "#collapseThree",
+                                    "aria-expanded": "false",
+                                    "aria-controls": "collapseThree"
+                                  }
                                 },
                                 [
                                   _vm._v(
-                                    "\n                                            At first, Please check your internet connection . We also have some online video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum .\n                                        "
+                                    "\n                                            Website reponse taking time, how to improve?\n                                        "
                                   )
                                 ]
                               )
-                            ]
-                          )
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "card border mb-2" }, [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "card-header bg-white border-0",
-                          attrs: { id: "headingFour" }
-                        },
-                        [
-                          _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "collapse",
+                            attrs: {
+                              id: "collapseThree",
+                              "aria-labelledby": "headingThree",
+                              "data-parent": "#accordionExample"
+                            }
+                          },
+                          [
                             _c(
-                              "a",
-                              {
-                                staticClass:
-                                  "d-block position-relative collapsed text-dark collapsible-link py-3",
-                                attrs: {
-                                  href: "#",
-                                  "data-toggle": "collapse",
-                                  "data-target": "#collapseFour",
-                                  "aria-expanded": "false",
-                                  "aria-controls": "collapseThree"
-                                }
-                              },
+                              "div",
+                              { staticClass: "card-body pt-0 px-4 pb-4" },
                               [
-                                _vm._v(
-                                  "\n                                            How do I create a account?\n                                        "
+                                _c(
+                                  "p",
+                                  {
+                                    staticClass:
+                                      "font-weight-light text-muted m-0"
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                            At first, Please check your internet connection . We also have some online video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum .\n                                        "
+                                    )
+                                  ]
                                 )
                               ]
                             )
-                          ])
-                        ]
-                      ),
+                          ]
+                        )
+                      ]),
                       _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "collapse",
-                          attrs: {
-                            id: "collapseFour",
-                            "aria-labelledby": "headingThree",
-                            "data-parent": "#accordionExample"
-                          }
-                        },
-                        [
-                          _c(
-                            "div",
-                            { staticClass: "card-body pt-0 px-4 pb-4" },
-                            [
+                      _c("div", { staticClass: "card border mb-2" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "card-header bg-white border-0",
+                            attrs: { id: "headingFour" }
+                          },
+                          [
+                            _c("h6", { staticClass: "mb-0 font-weight-bold" }, [
                               _c(
-                                "p",
-                                { staticClass: "font-weight-light m-0" },
+                                "a",
+                                {
+                                  staticClass:
+                                    "d-block position-relative collapsed text-dark collapsible-link py-3",
+                                  attrs: {
+                                    href: "#",
+                                    "data-toggle": "collapse",
+                                    "data-target": "#collapseFour",
+                                    "aria-expanded": "false",
+                                    "aria-controls": "collapseThree"
+                                  }
+                                },
                                 [
                                   _vm._v(
-                                    "\n                                            If you want to open an account for personal use you can do it over the phone or online. Opening an account online should only take a few minutes.\n                                        "
+                                    "\n                                            How do I create a account?\n                                        "
                                   )
                                 ]
                               )
-                            ]
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ])
-            ]
-          )
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "collapse",
+                            attrs: {
+                              id: "collapseFour",
+                              "aria-labelledby": "headingThree",
+                              "data-parent": "#accordionExample"
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              { staticClass: "card-body pt-0 px-4 pb-4" },
+                              [
+                                _c(
+                                  "p",
+                                  { staticClass: "font-weight-light m-0" },
+                                  [
+                                    _vm._v(
+                                      "\n                                            If you want to open an account for personal use you can do it over the phone or online. Opening an account online should only take a few minutes.\n                                        "
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ])
+              ]
+            )
+          ])
         ])
       ])
     ])
@@ -52059,118 +52037,117 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("cart-component", { attrs: { cart_items: _vm.shoppingCart } }),
-      _vm._v(" "),
-      _c(
-        "header",
-        [
-          _c("navbar-component", { attrs: { "navbar-class": "navbar-home" } }),
-          _vm._v(" "),
-          _vm._m(0)
-        ],
-        1
-      ),
-      _vm._v(" "),
       _c("main", [
-        _c("section", { staticClass: "ads-slider" }, [
-          _c(
-            "div",
-            { staticClass: "container-fluid" },
-            [
+        _c("section", { staticClass: "banner-area mb-4" }, [
+          _c("div", { staticClass: "row" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-12 col-sm-9" }, [
+              _vm._m(1),
+              _vm._v(" "),
               _c(
-                "swiper",
-                { staticClass: "swiper", attrs: { options: _vm.swiperOption } },
+                "div",
+                { staticClass: "promotional-ads" },
                 [
-                  _c("swiper-slide", [
-                    _c("img", {
-                      staticClass: "img-fluid",
-                      attrs: {
-                        src:
-                          "https://shop.redq.now.sh/_next/static/images/offer-1-1f7a4c9ea0ba5a216bc7af1f60d044e0.png",
-                        alt: ""
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("swiper-slide", [
-                    _c("img", {
-                      staticClass: "img-fluid",
-                      attrs: {
-                        src:
-                          "https://shop.redq.now.sh/_next/static/images/offer-2-90d3534e1ad62a8b8a977f1290e61e9f.png",
-                        alt: ""
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("swiper-slide", [
-                    _c("img", {
-                      staticClass: "img-fluid",
-                      attrs: {
-                        src:
-                          "https://shop.redq.now.sh/_next/static/images/offer-3-2f8285b13bef950f843cb4147666af6e.png",
-                        alt: ""
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("swiper-slide", [
-                    _c("img", {
-                      staticClass: "img-fluid",
-                      attrs: {
-                        src:
-                          "https://shop.redq.now.sh/_next/static/images/offer-1-1f7a4c9ea0ba5a216bc7af1f60d044e0.png",
-                        alt: ""
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("swiper-slide", [
-                    _c("img", {
-                      staticClass: "img-fluid",
-                      attrs: {
-                        src:
-                          "https://shop.redq.now.sh/_next/static/images/offer-2-90d3534e1ad62a8b8a977f1290e61e9f.png",
-                        alt: ""
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("swiper-slide", [
-                    _c("img", {
-                      staticClass: "img-fluid",
-                      attrs: {
-                        src:
-                          "https://shop.redq.now.sh/_next/static/images/offer-3-2f8285b13bef950f843cb4147666af6e.png",
-                        alt: ""
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", {
-                    staticClass: "swiper-button-prev",
-                    attrs: { slot: "button-prev" },
-                    slot: "button-prev"
-                  }),
-                  _vm._v(" "),
-                  _c("div", {
-                    staticClass: "swiper-button-next",
-                    attrs: { slot: "button-next" },
-                    slot: "button-next"
-                  })
+                  _c(
+                    "swiper",
+                    {
+                      staticClass: "swiper",
+                      attrs: { options: _vm.swiperOption }
+                    },
+                    [
+                      _c("swiper-slide", [
+                        _c("img", {
+                          staticClass: "img-fluid",
+                          attrs: {
+                            src:
+                              "https://shop.redq.now.sh/_next/static/images/offer-1-1f7a4c9ea0ba5a216bc7af1f60d044e0.png",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("swiper-slide", [
+                        _c("img", {
+                          staticClass: "img-fluid",
+                          attrs: {
+                            src:
+                              "https://shop.redq.now.sh/_next/static/images/offer-2-90d3534e1ad62a8b8a977f1290e61e9f.png",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("swiper-slide", [
+                        _c("img", {
+                          staticClass: "img-fluid",
+                          attrs: {
+                            src:
+                              "https://shop.redq.now.sh/_next/static/images/offer-3-2f8285b13bef950f843cb4147666af6e.png",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("swiper-slide", [
+                        _c("img", {
+                          staticClass: "img-fluid",
+                          attrs: {
+                            src:
+                              "https://shop.redq.now.sh/_next/static/images/offer-1-1f7a4c9ea0ba5a216bc7af1f60d044e0.png",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("swiper-slide", [
+                        _c("img", {
+                          staticClass: "img-fluid",
+                          attrs: {
+                            src:
+                              "https://shop.redq.now.sh/_next/static/images/offer-2-90d3534e1ad62a8b8a977f1290e61e9f.png",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("swiper-slide", [
+                        _c("img", {
+                          staticClass: "img-fluid",
+                          attrs: {
+                            src:
+                              "https://shop.redq.now.sh/_next/static/images/offer-3-2f8285b13bef950f843cb4147666af6e.png",
+                            alt: ""
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", {
+                        staticClass: "swiper-button-prev",
+                        attrs: { slot: "button-prev" },
+                        slot: "button-prev"
+                      }),
+                      _vm._v(" "),
+                      _c("div", {
+                        staticClass: "swiper-button-next",
+                        attrs: { slot: "button-next" },
+                        slot: "button-next"
+                      })
+                    ],
+                    1
+                  )
                 ],
                 1
               )
-            ],
-            1
-          )
+            ])
+          ])
         ]),
         _vm._v(" "),
         _c(
           "section",
           { staticClass: "products-area", attrs: { id: "productsArea" } },
           [
-            _vm._m(1),
+            _vm._m(2),
             _vm._v(" "),
             _c(
               "div",
@@ -52252,7 +52229,7 @@ var render = function() {
                                     }
                                   },
                                   [
-                                    _vm._m(2, true),
+                                    _vm._m(3, true),
                                     _vm._v(" "),
                                     _c("span", { staticClass: "btn-text" }, [
                                       _vm._v("Cart")
@@ -52266,13 +52243,13 @@ var render = function() {
                                       "d-flex align-items-center product-counter"
                                   },
                                   [
-                                    _vm._m(3, true),
+                                    _vm._m(4, true),
                                     _vm._v(" "),
                                     _c("span", { staticClass: "mx-3" }, [
                                       _vm._v("1")
                                     ]),
                                     _vm._v(" "),
-                                    _vm._m(4, true)
+                                    _vm._m(5, true)
                                   ]
                                 )
                           ])
@@ -52282,7 +52259,7 @@ var render = function() {
                   )
                 }),
                 _vm._v(" "),
-                _vm._m(5)
+                _vm._m(6)
               ],
               2
             )
@@ -52292,7 +52269,7 @@ var render = function() {
       _vm._v(" "),
       _c("login-register-modal"),
       _vm._v(" "),
-      _vm._m(6)
+      _vm._m(7)
     ],
     1
   )
@@ -52302,679 +52279,737 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "banner-content text-center d-flex flex-column justify-content-center h-100"
-      },
-      [
-        _c("div", { staticClass: "banner-content-wrapper" }, [
-          _c("h1", [_vm._v("Groceries Delivered in 90 Minute")]),
-          _vm._v(" "),
-          _c("h5", { staticClass: "text-muted mb-5" }, [
-            _vm._v(
-              "Get your healthy foods & snacks delivered at your doorsteps all day\n                    everyday"
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "main-search-wrapper mx-auto px-1" }, [
-            _c("div", { staticClass: "row no-gutters" }, [
-              _c("div", { staticClass: "col-10" }, [
-                _c("div", { staticClass: "p-1" }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col-2" }, [
-                      _c("div", { staticClass: "search-category" }, [
-                        _vm._v(
-                          "\n                                            Grocery\n                                        "
-                        )
-                      ])
+    return _c("div", { staticClass: "col-12 col-sm-3" }, [
+      _c("div", { staticClass: "category-sidebar h-100" }, [
+        _c(
+          "nav",
+          {
+            staticClass: "category-sidenav accordion",
+            attrs: { id: "sidenavAccordion" }
+          },
+          [
+            _c("div", { staticClass: "category-sidenav-menu" }, [
+              _c("div", { staticClass: "nav" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link collapsed",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#fruitsAndVegetables",
+                      "aria-expanded": "false",
+                      "aria-controls": "fruitsAndVegetables"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "category-sidenav-link-icon" }, [
+                      _c("i", { staticClass: "icofont-fruits" })
                     ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-8" }, [
-                      _c("div", { staticClass: "search-input" }, [
-                        _c("input", {
-                          staticClass: "form-control",
-                          attrs: {
-                            type: "text",
-                            placeholder: "Search yout product from here"
-                          }
-                        })
-                      ])
-                    ])
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-2" }, [
-                _c("div", { staticClass: "search-button" }, [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "icofont-search-2" }),
-                    _vm._v(" Search\n                                ")
-                  ])
-                ])
+                    _vm._v(
+                      "\n                                        Fruits & Vegetables\n                                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapse",
+                    attrs: {
+                      id: "fruitsAndVegetables",
+                      "aria-labelledby": "headingOne",
+                      "data-parent": "#sidenavAccordion"
+                    }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "category-sidenav-menu-nested nav" },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Fruits\n                                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Vegetables\n                                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link collapsed",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#meatAndFish",
+                      "aria-expanded": "false",
+                      "aria-controls": "meatAndFish"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "category-sidenav-link-icon" }, [
+                      _c("i", { staticClass: "icofont-fish-5" })
+                    ]),
+                    _vm._v(
+                      "\n                                        Meat & Fish\n                                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapse",
+                    attrs: {
+                      id: "meatAndFish",
+                      "aria-labelledby": "headingOne",
+                      "data-parent": "#sidenavAccordion"
+                    }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "category-sidenav-menu-nested nav" },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Meat\n                                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Fish\n                                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link collapsed",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#snacks",
+                      "aria-expanded": "false",
+                      "aria-controls": "snacks"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "category-sidenav-link-icon" }, [
+                      _c("i", { staticClass: "icofont-bread" })
+                    ]),
+                    _vm._v(
+                      "\n                                        Snacks\n                                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapse",
+                    attrs: {
+                      id: "snacks",
+                      "aria-labelledby": "headingOne",
+                      "data-parent": "#sidenavAccordion"
+                    }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "category-sidenav-menu-nested nav" },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Biscuits\n                                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Chocolates\n                                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link collapsed",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#petCare",
+                      "aria-expanded": "false",
+                      "aria-controls": "petCare"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "category-sidenav-link-icon" }, [
+                      _c("i", { staticClass: "icofont-cat-alt-3" })
+                    ]),
+                    _vm._v(
+                      "\n                                        Pet Care\n                                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapse",
+                    attrs: {
+                      id: "petCare",
+                      "aria-labelledby": "headingOne",
+                      "data-parent": "#sidenavAccordion"
+                    }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "category-sidenav-menu-nested nav" },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Meat\n                                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Fish\n                                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link collapsed",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#homeAndCleaning",
+                      "aria-expanded": "false",
+                      "aria-controls": "homeAndCleaning"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "category-sidenav-link-icon" }, [
+                      _c("i", { staticClass: "icofont-paint-brush" })
+                    ]),
+                    _vm._v(
+                      "\n                                        Home & Cleaning\n                                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapse",
+                    attrs: {
+                      id: "homeAndCleaning",
+                      "aria-labelledby": "headingOne",
+                      "data-parent": "#sidenavAccordion"
+                    }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "category-sidenav-menu-nested nav" },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Meat\n                                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Fish\n                                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link collapsed",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#dairy",
+                      "aria-expanded": "false",
+                      "aria-controls": "dairy"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "category-sidenav-link-icon" }, [
+                      _c("i", { staticClass: "icofont-milk" })
+                    ]),
+                    _vm._v(
+                      "\n                                        Dairy\n                                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapse",
+                    attrs: {
+                      id: "dairy",
+                      "aria-labelledby": "headingOne",
+                      "data-parent": "#sidenavAccordion"
+                    }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "category-sidenav-menu-nested nav" },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Meat\n                                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Fish\n                                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link collapsed",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#cooking",
+                      "aria-expanded": "false",
+                      "aria-controls": "cooking"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "category-sidenav-link-icon" }, [
+                      _c("i", { staticClass: "icofont-muffin" })
+                    ]),
+                    _vm._v(
+                      "\n                                        Cooking\n                                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapse",
+                    attrs: {
+                      id: "cooking",
+                      "aria-labelledby": "headingOne",
+                      "data-parent": "#sidenavAccordion"
+                    }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "category-sidenav-menu-nested nav" },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Meat\n                                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Fish\n                                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link collapsed",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#breakfast",
+                      "aria-expanded": "false",
+                      "aria-controls": "breakfast"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "category-sidenav-link-icon" }, [
+                      _c("i", { staticClass: "icofont-fast-food" })
+                    ]),
+                    _vm._v(
+                      "\n                                        Breakfast\n                                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapse",
+                    attrs: {
+                      id: "breakfast",
+                      "aria-labelledby": "headingOne",
+                      "data-parent": "#sidenavAccordion"
+                    }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "category-sidenav-menu-nested nav" },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Meat\n                                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Fish\n                                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link collapsed",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#beverage",
+                      "aria-expanded": "false",
+                      "aria-controls": "beverage"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "category-sidenav-link-icon" }, [
+                      _c("i", { staticClass: "icofont-soft-drinks" })
+                    ]),
+                    _vm._v(
+                      "\n                                        Beverage\n                                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapse",
+                    attrs: {
+                      id: "beverage",
+                      "aria-labelledby": "headingOne",
+                      "data-parent": "#sidenavAccordion"
+                    }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "category-sidenav-menu-nested nav" },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Meat\n                                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Fish\n                                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-link collapsed",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "collapse",
+                      "data-target": "#beautyAndHealth",
+                      "aria-expanded": "false",
+                      "aria-controls": "beautyAndHealth"
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "category-sidenav-link-icon" }, [
+                      _c("i", { staticClass: "icofont-heart-beat-alt" })
+                    ]),
+                    _vm._v(
+                      "\n                                        Beauty & Health\n                                    "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "collapse",
+                    attrs: {
+                      id: "beautyAndHealth",
+                      "aria-labelledby": "headingOne",
+                      "data-parent": "#sidenavAccordion"
+                    }
+                  },
+                  [
+                    _c(
+                      "nav",
+                      { staticClass: "category-sidenav-menu-nested nav" },
+                      [
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Meat\n                                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          { staticClass: "nav-link", attrs: { href: "/" } },
+                          [
+                            _c("i", { staticClass: "icofont-minus" }),
+                            _vm._v(
+                              " Fish\n                                            "
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
               ])
             ])
-          ])
-        ])
-      ]
-    )
+          ]
+        )
+      ])
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "category-sidebar" }, [
+    return _c("div", { staticClass: "main-slider" }, [
       _c(
-        "nav",
+        "div",
         {
-          staticClass: "category-sidenav accordion",
-          attrs: { id: "sidenavAccordion" }
+          staticClass: "carousel slide",
+          attrs: { id: "carouselExampleIndicators2", "data-ride": "carousel" }
         },
         [
-          _c("div", { staticClass: "category-sidenav-menu" }, [
-            _c("div", { staticClass: "nav" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link collapsed",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#fruitsAndVegetables",
-                    "aria-expanded": "false",
-                    "aria-controls": "fruitsAndVegetables"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "category-sidenav-link-icon" }, [
-                    _c("i", { staticClass: "icofont-fruits" })
-                  ]),
-                  _vm._v(
-                    "\n                                Fruits & Vegetables\n                            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse",
-                  attrs: {
-                    id: "fruitsAndVegetables",
-                    "aria-labelledby": "headingOne",
-                    "data-parent": "#sidenavAccordion"
-                  }
-                },
-                [
-                  _c(
-                    "nav",
-                    { staticClass: "category-sidenav-menu-nested nav" },
-                    [
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(
-                            " Fruits\n                                    "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(
-                            " Vegetables\n                                    "
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link collapsed",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#meatAndFish",
-                    "aria-expanded": "false",
-                    "aria-controls": "meatAndFish"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "category-sidenav-link-icon" }, [
-                    _c("i", { staticClass: "icofont-fish-5" })
-                  ]),
-                  _vm._v(
-                    "\n                                Meat & Fish\n                            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse",
-                  attrs: {
-                    id: "meatAndFish",
-                    "aria-labelledby": "headingOne",
-                    "data-parent": "#sidenavAccordion"
-                  }
-                },
-                [
-                  _c(
-                    "nav",
-                    { staticClass: "category-sidenav-menu-nested nav" },
-                    [
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Meat\n                                    ")
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Fish\n                                    ")
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link collapsed",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#snacks",
-                    "aria-expanded": "false",
-                    "aria-controls": "snacks"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "category-sidenav-link-icon" }, [
-                    _c("i", { staticClass: "icofont-bread" })
-                  ]),
-                  _vm._v(
-                    "\n                                Snacks\n                            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse",
-                  attrs: {
-                    id: "snacks",
-                    "aria-labelledby": "headingOne",
-                    "data-parent": "#sidenavAccordion"
-                  }
-                },
-                [
-                  _c(
-                    "nav",
-                    { staticClass: "category-sidenav-menu-nested nav" },
-                    [
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(
-                            " Biscuits\n                                    "
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(
-                            " Chocolates\n                                    "
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link collapsed",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#petCare",
-                    "aria-expanded": "false",
-                    "aria-controls": "petCare"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "category-sidenav-link-icon" }, [
-                    _c("i", { staticClass: "icofont-cat-alt-3" })
-                  ]),
-                  _vm._v(
-                    "\n                                Pet Care\n                            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse",
-                  attrs: {
-                    id: "petCare",
-                    "aria-labelledby": "headingOne",
-                    "data-parent": "#sidenavAccordion"
-                  }
-                },
-                [
-                  _c(
-                    "nav",
-                    { staticClass: "category-sidenav-menu-nested nav" },
-                    [
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Meat\n                                    ")
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Fish\n                                    ")
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link collapsed",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#homeAndCleaning",
-                    "aria-expanded": "false",
-                    "aria-controls": "homeAndCleaning"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "category-sidenav-link-icon" }, [
-                    _c("i", { staticClass: "icofont-paint-brush" })
-                  ]),
-                  _vm._v(
-                    "\n                                Home & Cleaning\n                            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse",
-                  attrs: {
-                    id: "homeAndCleaning",
-                    "aria-labelledby": "headingOne",
-                    "data-parent": "#sidenavAccordion"
-                  }
-                },
-                [
-                  _c(
-                    "nav",
-                    { staticClass: "category-sidenav-menu-nested nav" },
-                    [
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Meat\n                                    ")
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Fish\n                                    ")
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link collapsed",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#dairy",
-                    "aria-expanded": "false",
-                    "aria-controls": "dairy"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "category-sidenav-link-icon" }, [
-                    _c("i", { staticClass: "icofont-milk" })
-                  ]),
-                  _vm._v(
-                    "\n                                Dairy\n                            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse",
-                  attrs: {
-                    id: "dairy",
-                    "aria-labelledby": "headingOne",
-                    "data-parent": "#sidenavAccordion"
-                  }
-                },
-                [
-                  _c(
-                    "nav",
-                    { staticClass: "category-sidenav-menu-nested nav" },
-                    [
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Meat\n                                    ")
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Fish\n                                    ")
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link collapsed",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#cooking",
-                    "aria-expanded": "false",
-                    "aria-controls": "cooking"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "category-sidenav-link-icon" }, [
-                    _c("i", { staticClass: "icofont-muffin" })
-                  ]),
-                  _vm._v(
-                    "\n                                Cooking\n                            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse",
-                  attrs: {
-                    id: "cooking",
-                    "aria-labelledby": "headingOne",
-                    "data-parent": "#sidenavAccordion"
-                  }
-                },
-                [
-                  _c(
-                    "nav",
-                    { staticClass: "category-sidenav-menu-nested nav" },
-                    [
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Meat\n                                    ")
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Fish\n                                    ")
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link collapsed",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#breakfast",
-                    "aria-expanded": "false",
-                    "aria-controls": "breakfast"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "category-sidenav-link-icon" }, [
-                    _c("i", { staticClass: "icofont-fast-food" })
-                  ]),
-                  _vm._v(
-                    "\n                                Breakfast\n                            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse",
-                  attrs: {
-                    id: "breakfast",
-                    "aria-labelledby": "headingOne",
-                    "data-parent": "#sidenavAccordion"
-                  }
-                },
-                [
-                  _c(
-                    "nav",
-                    { staticClass: "category-sidenav-menu-nested nav" },
-                    [
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Meat\n                                    ")
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Fish\n                                    ")
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link collapsed",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#beverage",
-                    "aria-expanded": "false",
-                    "aria-controls": "beverage"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "category-sidenav-link-icon" }, [
-                    _c("i", { staticClass: "icofont-soft-drinks" })
-                  ]),
-                  _vm._v(
-                    "\n                                Beverage\n                            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse",
-                  attrs: {
-                    id: "beverage",
-                    "aria-labelledby": "headingOne",
-                    "data-parent": "#sidenavAccordion"
-                  }
-                },
-                [
-                  _c(
-                    "nav",
-                    { staticClass: "category-sidenav-menu-nested nav" },
-                    [
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Meat\n                                    ")
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Fish\n                                    ")
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "nav-link collapsed",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "collapse",
-                    "data-target": "#beautyAndHealth",
-                    "aria-expanded": "false",
-                    "aria-controls": "beautyAndHealth"
-                  }
-                },
-                [
-                  _c("div", { staticClass: "category-sidenav-link-icon" }, [
-                    _c("i", { staticClass: "icofont-heart-beat-alt" })
-                  ]),
-                  _vm._v(
-                    "\n                                Beauty & Health\n                            "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "collapse",
-                  attrs: {
-                    id: "beautyAndHealth",
-                    "aria-labelledby": "headingOne",
-                    "data-parent": "#sidenavAccordion"
-                  }
-                },
-                [
-                  _c(
-                    "nav",
-                    { staticClass: "category-sidenav-menu-nested nav" },
-                    [
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Meat\n                                    ")
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "a",
-                        { staticClass: "nav-link", attrs: { href: "/" } },
-                        [
-                          _c("i", { staticClass: "icofont-minus" }),
-                          _vm._v(" Fish\n                                    ")
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              )
+          _c("ol", { staticClass: "carousel-indicators" }, [
+            _c("li", {
+              staticClass: "active",
+              attrs: {
+                "data-target": "#carouselExampleIndicators2",
+                "data-slide-to": "0"
+              }
+            }),
+            _vm._v(" "),
+            _c("li", {
+              attrs: {
+                "data-target": "#carouselExampleIndicators2",
+                "data-slide-to": "1"
+              }
+            }),
+            _vm._v(" "),
+            _c("li", {
+              attrs: {
+                "data-target": "#carouselExampleIndicators2",
+                "data-slide-to": "2"
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "carousel-inner" }, [
+            _c("div", { staticClass: "carousel-item active" }, [
+              _c("img", {
+                staticClass: "img-fluid rounded",
+                attrs: {
+                  src:
+                    "https://images.pexels.com/photos/2252584/pexels-photo-2252584.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                  alt: "..."
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-item" }, [
+              _c("img", {
+                staticClass: "img-fluid rounded",
+                attrs: {
+                  src:
+                    "https://images.pexels.com/photos/1414651/pexels-photo-1414651.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                  alt: "..."
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "carousel-item" }, [
+              _c("img", {
+                staticClass: "img-fluid rounded",
+                attrs: {
+                  src:
+                    "https://images.pexels.com/photos/2893635/pexels-photo-2893635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                  alt: "..."
+                }
+              })
             ])
           ])
         ]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "products-group-title" }, [
+      _c("h4", { staticClass: "mb-0" }, [
+        _c("span", [
+          _vm._v("\n                        Groceries\n                    ")
+        ])
+      ])
     ])
   },
   function() {
@@ -53228,22 +53263,15 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "nav",
-    {
-      staticClass: "navbar navbar-expand-lg fixed-top",
-      class: _vm.navbarClass
-    },
-    [
-      _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
-        _c("img", { attrs: { src: "/img/logo.svg", alt: "" } })
-      ]),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _vm._m(1)
-    ]
-  )
+  return _c("nav", { staticClass: "navbar navbar-expand-lg fixed-top" }, [
+    _c("a", { staticClass: "navbar-brand", attrs: { href: "/" } }, [
+      _c("img", { attrs: { src: "/img/logo.svg", alt: "" } })
+    ]),
+    _vm._v(" "),
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1)
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -53277,319 +53305,380 @@ var staticRenderFns = [
         attrs: { id: "navbarSupportedContent" }
       },
       [
-        _c("ul", { staticClass: "navbar-nav m-0 ml-sm-0 ml-md-3" }, [
-          _c("li", { staticClass: "nav-item dropdown rounded" }, [
-            _c(
-              "a",
-              {
-                staticClass:
-                  "nav-link dropdown-toggle text-brand-color d-flex align-items-center",
-                attrs: {
-                  href: "#",
-                  id: "navbarDropdown",
-                  role: "button",
-                  "data-toggle": "dropdown",
-                  "aria-haspopup": "true",
-                  "aria-expanded": "false"
-                }
-              },
-              [
-                _c("i", { staticClass: "icofont-fruits mr-1" }),
-                _vm._v(" Grocery\n                ")
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "dropdown-menu dropdown-menu-right",
-                attrs: { "aria-labelledby": "navbarDropdown" }
-              },
-              [
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item active", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "icofont-fruits mr-3" }),
-                    _vm._v("Grocery\n                    ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "icofont-fruits mr-3" }),
-                    _vm._v("Makeup\n                    ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "icofont-bag-alt mr-3" }),
-                    _vm._v("Bags\n                    ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "icofont-baby-cloth mr-3" }),
-                    _vm._v("Clothing\n                    ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "icofont-chair mr-3" }),
-                    _vm._v("Furniture\n                    ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "icofont-book mr-3" }),
-                    _vm._v("Book\n                    ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "icofont-medicine mr-3" }),
-                    _vm._v("Medicine\n                    ")
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "dropdown-item", attrs: { href: "#" } },
-                  [
-                    _c("i", { staticClass: "icofont-fast-food mr-3" }),
-                    _vm._v("Foods\n                    ")
-                  ]
-                )
-              ]
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("ul", { staticClass: "navbar-nav ml-auto" }, [
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              { staticClass: "nav-link mr-4", attrs: { href: "/offer" } },
-              [_vm._v("\n                    Offer\n                ")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              { staticClass: "nav-link mr-4", attrs: { href: "/help" } },
-              [
-                _c("i", { staticClass: "icofont-question-circle" }),
-                _vm._v(" Need Help\n                ")
-              ]
-            )
-          ]),
-          _vm._v(" "),
+        _c("div", { staticClass: "row w-100" }, [
           _c(
-            "li",
-            { staticClass: "nav-item dropdown rounded mb-3 mb-sm-3 mb-md-0" },
+            "div",
+            { staticClass: "col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2" },
             [
-              _c(
-                "a",
-                {
-                  staticClass:
-                    "nav-link dropdown-toggle text-brand-color d-flex align-items-center",
-                  attrs: {
-                    href: "#",
-                    id: "navbarDropdownLanguage",
-                    role: "button",
-                    "data-toggle": "dropdown",
-                    "aria-haspopup": "true",
-                    "aria-expanded": "false"
-                  }
-                },
-                [
-                  _c("img", {
-                    staticClass: "mr-1",
-                    attrs: {
-                      src:
-                        "https://image.flaticon.com/icons/svg/2060/2060619.svg",
-                      width: "20",
-                      alt: "English"
-                    }
-                  }),
-                  _vm._v(" English\n                ")
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "dropdown-menu dropdown-menu-right",
-                  attrs: { "aria-labelledby": "navbarDropdownLanguage" }
-                },
-                [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "dropdown-item d-flex align-items-center",
-                      attrs: { href: "#" }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "mr-3",
-                        attrs: {
-                          src:
-                            "https://image.flaticon.com/icons/svg/2060/2060646.svg",
-                          width: "20",
-                          alt: "Arabic"
-                        }
-                      }),
-                      _vm._v("Arabic\n                    ")
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "dropdown-divider m-0" }),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "dropdown-item d-flex align-items-center",
-                      attrs: { href: "#" }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "mr-3",
-                        attrs: {
-                          src:
-                            "https://image.flaticon.com/icons/svg/2060/2060632.svg",
-                          width: "20",
-                          alt: "Chinese"
-                        }
-                      }),
-                      _vm._v("Chinese\n                    ")
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "dropdown-divider m-0" }),
-                  _vm._v(" "),
+              _c("ul", { staticClass: "navbar-nav justify-content-center" }, [
+                _c("li", { staticClass: "nav-item dropdown rounded" }, [
                   _c(
                     "a",
                     {
                       staticClass:
-                        "dropdown-item d-flex align-items-center active",
-                      attrs: { href: "#" }
+                        "nav-link dropdown-toggle text-brand-color d-flex align-items-center",
+                      attrs: {
+                        href: "#",
+                        id: "navbarDropdown",
+                        role: "button",
+                        "data-toggle": "dropdown",
+                        "aria-haspopup": "true",
+                        "aria-expanded": "false"
+                      }
                     },
                     [
-                      _c("img", {
-                        staticClass: "mr-3",
-                        attrs: {
-                          src:
-                            "https://image.flaticon.com/icons/svg/2060/2060619.svg",
-                          width: "20",
-                          alt: "English"
-                        }
-                      }),
-                      _vm._v("English\n                    ")
+                      _c("i", { staticClass: "icofont-fruits mr-1" }),
+                      _vm._v(" Grocery\n                        ")
                     ]
                   ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "dropdown-divider m-0" }),
-                  _vm._v(" "),
                   _c(
-                    "a",
+                    "div",
                     {
-                      staticClass: "dropdown-item d-flex align-items-center",
-                      attrs: { href: "#" }
+                      staticClass: "dropdown-menu dropdown-menu-right",
+                      attrs: { "aria-labelledby": "navbarDropdown" }
                     },
                     [
-                      _c("img", {
-                        staticClass: "mr-3",
-                        attrs: {
-                          src:
-                            "https://image.flaticon.com/icons/svg/2060/2060636.svg",
-                          width: "20",
-                          alt: "German"
-                        }
-                      }),
-                      _vm._v("German\n                    ")
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "dropdown-divider m-0" }),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "dropdown-item d-flex align-items-center",
-                      attrs: { href: "#" }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "mr-3",
-                        attrs: {
-                          src:
-                            "https://image.flaticon.com/icons/svg/2060/2060647.svg",
-                          width: "20",
-                          alt: "Hebrew"
-                        }
-                      }),
-                      _vm._v("Hebrew\n                    ")
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "dropdown-divider m-0" }),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "dropdown-item d-flex align-items-center",
-                      attrs: { href: "#" }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "mr-3",
-                        attrs: {
-                          src:
-                            "https://image.flaticon.com/icons/svg/2060/2060630.svg",
-                          width: "20",
-                          alt: "Spanish"
-                        }
-                      }),
-                      _vm._v("Spanish\n                    ")
+                      _c(
+                        "a",
+                        {
+                          staticClass: "dropdown-item active",
+                          attrs: { href: "#" }
+                        },
+                        [
+                          _c("i", { staticClass: "icofont-fruits mr-3" }),
+                          _vm._v("Grocery\n                            ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "dropdown-item", attrs: { href: "#" } },
+                        [
+                          _c("i", { staticClass: "icofont-fruits mr-3" }),
+                          _vm._v("Makeup\n                            ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "dropdown-item", attrs: { href: "#" } },
+                        [
+                          _c("i", { staticClass: "icofont-bag-alt mr-3" }),
+                          _vm._v("Bags\n                            ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "dropdown-item", attrs: { href: "#" } },
+                        [
+                          _c("i", { staticClass: "icofont-baby-cloth mr-3" }),
+                          _vm._v("Clothing\n                            ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "dropdown-item", attrs: { href: "#" } },
+                        [
+                          _c("i", { staticClass: "icofont-chair mr-3" }),
+                          _vm._v("Furniture\n                            ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "dropdown-item", attrs: { href: "#" } },
+                        [
+                          _c("i", { staticClass: "icofont-book mr-3" }),
+                          _vm._v("Book\n                            ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "dropdown-item", attrs: { href: "#" } },
+                        [
+                          _c("i", { staticClass: "icofont-medicine mr-3" }),
+                          _vm._v("Medicine\n                            ")
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        { staticClass: "dropdown-item", attrs: { href: "#" } },
+                        [
+                          _c("i", { staticClass: "icofont-fast-food mr-3" }),
+                          _vm._v("Foods\n                            ")
+                        ]
+                      )
                     ]
                   )
-                ]
-              )
+                ])
+              ])
             ]
           ),
           _vm._v(" "),
-          _c("li", { staticClass: "nav-item" }, [
-            _c(
-              "a",
-              {
-                staticClass: "nav-link btn btn-brand px-4 ml-0 ml-sm-0 ml-md-4",
-                attrs: {
-                  href: "#",
-                  "data-toggle": "modal",
-                  "data-target": "#authenticationModal"
-                }
-              },
-              [_vm._v("\n                    Join\n                ")]
-            )
-          ])
+          _c(
+            "div",
+            { staticClass: "col-12 col-sm-12 col-md-12 col-lg-4 col-xl-6" },
+            [
+              _c("form", { staticClass: "navbar-search" }, [
+                _c("div", { staticClass: "input-group" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: { type: "text", placeholder: "Search for..." }
+                  }),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "input-group-append" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-outline-secondary",
+                        attrs: { type: "button", id: "button-addon2" }
+                      },
+                      [_c("i", { staticClass: "icofont-search-2" })]
+                    )
+                  ])
+                ])
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 pr-lg-0"
+            },
+            [
+              _c(
+                "ul",
+                {
+                  staticClass: "navbar-nav justify-content-end navbar-nav-right"
+                },
+                [
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      { staticClass: "nav-link", attrs: { href: "/offer" } },
+                      [
+                        _vm._v(
+                          "\n                            Offer\n                        "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      { staticClass: "nav-link", attrs: { href: "/help" } },
+                      [
+                        _c("i", { staticClass: "icofont-question-circle" }),
+                        _vm._v(" Need Help\n                        ")
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item dropdown rounded" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "nav-link dropdown-toggle text-brand-color d-flex align-items-center",
+                        attrs: {
+                          href: "#",
+                          id: "navbarDropdownLanguage",
+                          role: "button",
+                          "data-toggle": "dropdown",
+                          "aria-haspopup": "true",
+                          "aria-expanded": "false"
+                        }
+                      },
+                      [
+                        _c("img", {
+                          staticClass: "mr-1",
+                          attrs: {
+                            src:
+                              "https://image.flaticon.com/icons/svg/2060/2060619.svg",
+                            width: "20",
+                            alt: "English"
+                          }
+                        }),
+                        _vm._v(" English\n                        ")
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "dropdown-menu dropdown-menu-right",
+                        attrs: { "aria-labelledby": "navbarDropdownLanguage" }
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "dropdown-item d-flex align-items-center",
+                            attrs: { href: "#" }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "mr-3",
+                              attrs: {
+                                src:
+                                  "https://image.flaticon.com/icons/svg/2060/2060646.svg",
+                                width: "20",
+                                alt: "Arabic"
+                              }
+                            }),
+                            _vm._v("Arabic\n                            ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "dropdown-divider m-0" }),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "dropdown-item d-flex align-items-center",
+                            attrs: { href: "#" }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "mr-3",
+                              attrs: {
+                                src:
+                                  "https://image.flaticon.com/icons/svg/2060/2060632.svg",
+                                width: "20",
+                                alt: "Chinese"
+                              }
+                            }),
+                            _vm._v("Chinese\n                            ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "dropdown-divider m-0" }),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "dropdown-item d-flex align-items-center active",
+                            attrs: { href: "#" }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "mr-3",
+                              attrs: {
+                                src:
+                                  "https://image.flaticon.com/icons/svg/2060/2060619.svg",
+                                width: "20",
+                                alt: "English"
+                              }
+                            }),
+                            _vm._v("English\n                            ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "dropdown-divider m-0" }),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "dropdown-item d-flex align-items-center",
+                            attrs: { href: "#" }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "mr-3",
+                              attrs: {
+                                src:
+                                  "https://image.flaticon.com/icons/svg/2060/2060636.svg",
+                                width: "20",
+                                alt: "German"
+                              }
+                            }),
+                            _vm._v("German\n                            ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "dropdown-divider m-0" }),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "dropdown-item d-flex align-items-center",
+                            attrs: { href: "#" }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "mr-3",
+                              attrs: {
+                                src:
+                                  "https://image.flaticon.com/icons/svg/2060/2060647.svg",
+                                width: "20",
+                                alt: "Hebrew"
+                              }
+                            }),
+                            _vm._v("Hebrew\n                            ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "dropdown-divider m-0" }),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "dropdown-item d-flex align-items-center",
+                            attrs: { href: "#" }
+                          },
+                          [
+                            _c("img", {
+                              staticClass: "mr-3",
+                              attrs: {
+                                src:
+                                  "https://image.flaticon.com/icons/svg/2060/2060630.svg",
+                                width: "20",
+                                alt: "Spanish"
+                              }
+                            }),
+                            _vm._v("Spanish\n                            ")
+                          ]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "nav-link btn btn-brand px-3",
+                        attrs: {
+                          href: "#",
+                          "data-toggle": "modal",
+                          "data-target": "#authenticationModal"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Join\n                        "
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ]
+          )
         ])
       ]
     )
@@ -53616,353 +53705,345 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("cart-component"),
-      _vm._v(" "),
-      _c("navbar-component", { attrs: { "navbar-class": "navbar-fixed-top" } }),
-      _vm._v(" "),
-      _vm._m(0)
-    ],
-    1
-  )
+  return _vm._m(0)
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("main", { staticClass: "pt-140" }, [
-      _c("div", { staticClass: "container-fluid" }, [
-        _c("div", { staticClass: "offer-wrapper px-5" }, [
-          _c("div", { staticClass: "single-offer" }, [
-            _c("img", {
-              staticClass: "img-fluid w-100",
-              attrs: {
-                src:
-                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
-                alt: "Offer image"
-              }
-            }),
+    return _c("div", [
+      _c("main", [
+        _c("div", { staticClass: "container-fluid" }, [
+          _c("div", { staticClass: "offer-wrapper px-5" }, [
+            _c("div", { staticClass: "single-offer" }, [
+              _c("img", {
+                staticClass: "img-fluid w-100",
+                attrs: {
+                  src:
+                    "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                  alt: "Offer image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "px-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                  },
+                  [
+                    _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "text-brand-color font-weight-bold",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Copy")]
+                    )
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
-                },
-                [
-                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-brand-color font-weight-bold",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Copy")]
-                  )
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "single-offer" }, [
-            _c("img", {
-              staticClass: "img-fluid w-100",
-              attrs: {
-                src:
-                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
-                alt: "Offer image"
-              }
-            }),
+            _c("div", { staticClass: "single-offer" }, [
+              _c("img", {
+                staticClass: "img-fluid w-100",
+                attrs: {
+                  src:
+                    "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
+                  alt: "Offer image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "px-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                  },
+                  [
+                    _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "text-brand-color font-weight-bold",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Copy")]
+                    )
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
-                },
-                [
-                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-brand-color font-weight-bold",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Copy")]
-                  )
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "single-offer" }, [
-            _c("img", {
-              staticClass: "img-fluid w-100",
-              attrs: {
-                src:
-                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
-                alt: "Offer image"
-              }
-            }),
+            _c("div", { staticClass: "single-offer" }, [
+              _c("img", {
+                staticClass: "img-fluid w-100",
+                attrs: {
+                  src:
+                    "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                  alt: "Offer image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "px-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                  },
+                  [
+                    _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "text-brand-color font-weight-bold",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Copy")]
+                    )
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
-                },
-                [
-                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-brand-color font-weight-bold",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Copy")]
-                  )
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "single-offer" }, [
-            _c("img", {
-              staticClass: "img-fluid w-100",
-              attrs: {
-                src:
-                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
-                alt: "Offer image"
-              }
-            }),
+            _c("div", { staticClass: "single-offer" }, [
+              _c("img", {
+                staticClass: "img-fluid w-100",
+                attrs: {
+                  src:
+                    "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
+                  alt: "Offer image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "px-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                  },
+                  [
+                    _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "text-brand-color font-weight-bold",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Copy")]
+                    )
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
-                },
-                [
-                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-brand-color font-weight-bold",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Copy")]
-                  )
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "single-offer" }, [
-            _c("img", {
-              staticClass: "img-fluid w-100",
-              attrs: {
-                src:
-                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
-                alt: "Offer image"
-              }
-            }),
+            _c("div", { staticClass: "single-offer" }, [
+              _c("img", {
+                staticClass: "img-fluid w-100",
+                attrs: {
+                  src:
+                    "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
+                  alt: "Offer image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "px-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                  },
+                  [
+                    _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "text-brand-color font-weight-bold",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Copy")]
+                    )
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
-                },
-                [
-                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-brand-color font-weight-bold",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Copy")]
-                  )
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "single-offer" }, [
-            _c("img", {
-              staticClass: "img-fluid w-100",
-              attrs: {
-                src:
-                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
-                alt: "Offer image"
-              }
-            }),
+            _c("div", { staticClass: "single-offer" }, [
+              _c("img", {
+                staticClass: "img-fluid w-100",
+                attrs: {
+                  src:
+                    "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                  alt: "Offer image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "px-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                  },
+                  [
+                    _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "text-brand-color font-weight-bold",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Copy")]
+                    )
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
-                },
-                [
-                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-brand-color font-weight-bold",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Copy")]
-                  )
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "single-offer" }, [
-            _c("img", {
-              staticClass: "img-fluid w-100",
-              attrs: {
-                src:
-                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
-                alt: "Offer image"
-              }
-            }),
+            _c("div", { staticClass: "single-offer" }, [
+              _c("img", {
+                staticClass: "img-fluid w-100",
+                attrs: {
+                  src:
+                    "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-2.png",
+                  alt: "Offer image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "px-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                  },
+                  [
+                    _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "text-brand-color font-weight-bold",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Copy")]
+                    )
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
-                },
-                [
-                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-brand-color font-weight-bold",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Copy")]
-                  )
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "single-offer" }, [
-            _c("img", {
-              staticClass: "img-fluid w-100",
-              attrs: {
-                src:
-                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
-                alt: "Offer image"
-              }
-            }),
+            _c("div", { staticClass: "single-offer" }, [
+              _c("img", {
+                staticClass: "img-fluid w-100",
+                attrs: {
+                  src:
+                    "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                  alt: "Offer image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "px-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                  },
+                  [
+                    _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "text-brand-color font-weight-bold",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Copy")]
+                    )
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
-                },
-                [
-                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-brand-color font-weight-bold",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Copy")]
-                  )
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "single-offer" }, [
-            _c("img", {
-              staticClass: "img-fluid w-100",
-              attrs: {
-                src:
-                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
-                alt: "Offer image"
-              }
-            }),
+            _c("div", { staticClass: "single-offer" }, [
+              _c("img", {
+                staticClass: "img-fluid w-100",
+                attrs: {
+                  src:
+                    "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                  alt: "Offer image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "px-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                  },
+                  [
+                    _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "text-brand-color font-weight-bold",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Copy")]
+                    )
+                  ]
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
-                },
-                [
-                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-brand-color font-weight-bold",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Copy")]
-                  )
-                ]
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "single-offer" }, [
-            _c("img", {
-              staticClass: "img-fluid w-100",
-              attrs: {
-                src:
-                  "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
-                alt: "Offer image"
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "px-3" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
-                },
-                [
-                  _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "text-brand-color font-weight-bold",
-                      attrs: { href: "#" }
-                    },
-                    [_vm._v("Copy")]
-                  )
-                ]
-              )
+            _c("div", { staticClass: "single-offer" }, [
+              _c("img", {
+                staticClass: "img-fluid w-100",
+                attrs: {
+                  src:
+                    "http://s3.amazonaws.com/redqteam.com/pickbazar/gift-card-1.png",
+                  alt: "Offer image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "px-3" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-3 bg-white d-flex align-items-center justify-content-between rounded-bottom"
+                  },
+                  [
+                    _c("h6", { staticClass: "mb-0" }, [_vm._v("RAMADAN15")]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "text-brand-color font-weight-bold",
+                        attrs: { href: "#" }
+                      },
+                      [_vm._v("Copy")]
+                    )
+                  ]
+                )
+              ])
             ])
           ])
         ])

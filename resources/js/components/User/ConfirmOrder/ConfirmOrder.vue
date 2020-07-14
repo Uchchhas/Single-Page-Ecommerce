@@ -1,10 +1,6 @@
 <template>
     <div>
-        <cart-component/>
-
-        <navbar-component :navbar-class="'navbar-fixed-top'"/>
-
-        <main class="pt-140">
+        <main>
             <div class="container">
                 <div class="card border-0 bg-white rounded mb-5">
                     <div class="card-header p-3 text-right bg-transparent border-0">

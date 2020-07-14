@@ -1,10 +1,6 @@
 <template>
     <div>
-        <cart-component/>
-
-        <navbar-component :navbar-class="'navbar-fixed-top'"/>
-
-        <main class="pt-140">
+        <main>
             <div class="container-fluid">
                 <div class="offer-wrapper px-5">
                     <div class="single-offer">
